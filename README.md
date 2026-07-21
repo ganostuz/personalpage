@@ -4,12 +4,11 @@ A lightweight personal site built with plain HTML, CSS, and JavaScript. It is re
 
 ## Update before publishing
 
-Replace the remaining profile and domain placeholders:
+Replace the remaining profile placeholders:
 
 - `[GITHUB URL]`, `[LINKEDIN URL]`, `[X URL]`
-- `[YOUR-DOMAIN]` in `robots.txt` and `sitemap.xml`
 
-When the custom domain is ready, add a `CNAME` file at the project root containing only that domain name.
+The GitHub Pages custom domain is configured as `stanislavguzej.dev` in `CNAME`, `robots.txt`, `sitemap.xml`, and page metadata.
 
 ## Local preview
 
@@ -20,7 +19,26 @@ Open `index.html` directly in a browser, or serve the directory with any static 
 1. Push this repository to GitHub.
 2. In **Settings → Pages**, choose **Deploy from a branch**.
 3. Select the `main` branch and the repository root.
-4. Add the custom domain and enable HTTPS after DNS is configured.
+4. Confirm the custom domain is `stanislavguzej.dev`.
+5. Enable **Enforce HTTPS** after GitHub finishes its DNS check and provisions the certificate.
+
+## Custom domain DNS
+
+Configure these records with the DNS provider for `stanislavguzej.dev`:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153` |
+| AAAA | `@` | `2606:50c0:8001::153` |
+| AAAA | `@` | `2606:50c0:8002::153` |
+| AAAA | `@` | `2606:50c0:8003::153` |
+| CNAME | `www` | `ganostuz.github.io` |
+
+Remove conflicting default records and do not add a wildcard record. In GitHub profile **Settings → Pages**, verify `stanislavguzej.dev` using the TXT record GitHub provides, then retain that record to protect the domain from takeover.
 
 ## Design note
 
