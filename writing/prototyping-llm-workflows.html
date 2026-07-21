@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A draft note by Stanislav Guzej about turning an LLM workflow prototype into a production system.">
+    <meta name="theme-color" content="#f7f7f5">
+    <title>From a quick LLM workflow to a production system — Stanislav Guzej</title>
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="From a quick LLM workflow to a production system">
+    <meta property="og:description" content="What changes when a useful experiment becomes something another person has to rely on.">
+    <meta property="og:image" content="../assets/img/og-card.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header wrapper">
+      <a class="wordmark" href="../index.html" aria-label="Stanislav Guzej home">Stanislav Guzej</a>
+      <nav aria-label="Primary navigation"><ul class="nav-list"><li><a href="../index.html">Home</a></li><li><a class="active" href="index.html" aria-current="page">Writing</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../about.html">About</a></li></ul></nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><span aria-hidden="true">◐</span></button>
+    </header>
+    <main id="content" class="article-page">
+      <article class="article-content">
+        <a class="back-link" href="index.html">← Back to writing</a>
+        <header class="article-header">
+          <p class="article-topic">Workflow design</p>
+          <h1>From a quick LLM workflow to a production system</h1>
+          <p class="article-dek">A prototype proves that an interaction can be useful. Production work proves that it can stay useful when the context becomes less friendly.</p>
+          <p class="meta">July 2026 · 6 min read</p>
+        </header>
+        <div class="article-body">
+          <p>The first version of an LLM workflow is often wonderfully direct: a prompt, an input, and an answer that feels surprisingly good. That is exactly the point of a prototype. It compresses the path from question to feedback.</p>
+          <p>But the moment someone else relies on that workflow, the question changes. It is no longer <em>can this produce a good answer?</em> It becomes <em>when does it fail, how will we notice, and what happens next?</em></p>
+          <h2>Keep the prototype, add the seams</h2>
+          <p>I do not think the answer is to replace a prototype with a giant framework. The useful next step is smaller: make the assumptions visible enough to inspect.</p>
+          <ul>
+            <li>Write down the representative inputs, including the awkward ones.</li>
+            <li>Separate the prompt from the rest of the application logic.</li>
+            <li>Save a few outputs that show what “good enough” means.</li>
+          </ul>
+          <blockquote>
+            <p>Reliability begins when an opinion about quality becomes an example another person can review.</p>
+          </blockquote>
+          <h2>Turn examples into a small evaluation loop</h2>
+          <p>The first evaluation loop does not need a perfect metric. A compact set of scenarios and a clear place to record a judgement is already more useful than re-running a favourite example by hand.</p>
+          <pre><code>scenario = evaluate(
+    input=customer_question,
+    expected="explains the next action clearly",
+    model_output=response,
+)
+
+record(scenario, reviewer_note="Helpful, but too vague on timing")</code></pre>
+          <p>This is deliberately plain. The goal is not to automate every decision; it is to create a repeatable conversation between the system, its users, and the people responsible for improving it.</p>
+          <aside class="article-callout"><p><strong>A useful rule:</strong> If an evaluation result cannot suggest a next action, it is probably measuring the wrong thing—or presenting it in the wrong way.</p></aside>
+          <h2>Production is a learning environment</h2>
+          <p>A production-ready workflow is not one that never changes. It is one that can change without making everyone nervous. Clear scenarios, inspectable outputs, and short feedback loops create that confidence.</p>
+          <p>That is the part of LLM systems work I find most interesting: building the conditions where people can learn from model behaviour rather than simply hope for it.</p>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer wrapper"><p>© <span data-current-year></span> Stanislav Guzej</p><a href="mailto:guzej.sta@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></footer>
+  </body>
+</html>
