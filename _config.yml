@@ -5,6 +5,9 @@ baseurl: ""
 lang: en
 timezone: Europe/Bratislava
 email: guzej.sta@gmail.com
+social:
+  github: https://github.com/ganostuz
+  linkedin: https://www.linkedin.com/in/stanislav-guzej/
 
 permalink: /writing/:title/
 future: false
