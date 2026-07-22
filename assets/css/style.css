@@ -148,12 +148,6 @@ h1, h2, h3 { line-height: 1.2; }
 .page-intro { max-width: 42rem; margin-bottom: 3rem; color: var(--muted); font-size: 1.06rem; }
 .prose { max-width: 43rem; font-family: var(--serif); font-size: clamp(1.08rem, 1.7vw, 1.22rem); line-height: 1.7; }
 .prose p { margin-bottom: 1.25rem; }
-.compact-section-title { margin: 0 0 1.4rem; font-size: 1.25rem; }
-.working-principles { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
-.principle-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); }
-.principle-cards article { padding: 1.2rem; background: var(--background); transition: background-color var(--motion-fast) ease, transform var(--motion-fast) var(--ease-out); }
-.principle-cards h3 { margin-bottom: 0.5rem; font-size: 1rem; }
-.principle-cards p { margin: 0; color: var(--muted); font-size: 0.87rem; }
 .page-links { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 2.5rem; }
 .about-page { max-width: 64rem; }
 .about-header { max-width: 43rem; margin-bottom: 3rem; }
@@ -169,8 +163,9 @@ h1, h2, h3 { line-height: 1.2; }
 .about-facts dd { margin: 0; font-size: 0.9rem; }
 .about-section { margin-top: clamp(4rem, 8vw, 6rem); padding-top: 1.5rem;}
 .about-section .numbered-heading { margin-bottom: 1.75rem; }
-.direction-card { max-width: 46rem; padding: 1.4rem 1.5rem; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); background: var(--accent-soft); transition: transform var(--motion-medium) var(--ease-out), box-shadow var(--motion-medium) ease; }
-.direction-card p { margin: 0; color: var(--text); }
+.community-card { max-width: 46rem; padding: 1.4rem 1.5rem; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); background: var(--accent-soft); transition: transform var(--motion-medium) var(--ease-out), box-shadow var(--motion-medium) ease; }
+.community-card p { margin: 0; color: var(--text); }
+.community-card p + p { margin-top: 0.85rem; color: var(--muted); }
 .project-stack { display: grid; gap: 1rem; }
 .project-card { padding: 1.6rem; border: 1px solid var(--line); background: var(--surface); transition: border-color var(--motion-medium) ease, transform var(--motion-medium) var(--ease-out), box-shadow var(--motion-medium) ease; }
 .project-card-featured { border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); background: var(--accent-soft); }
@@ -244,9 +239,8 @@ code { padding: 0.1rem 0.28rem; background: var(--surface-strong); color: var(--
   .nav-list a[href$="/writing/"]:hover, .writing-item .text-link:hover span, .writing-section .section-link:hover span { transform: none; }
   .nav-list a[href$="/writing/"].active:hover::after { transform: none; }
   .button-link:hover { box-shadow: 0 0.55rem 1.4rem color-mix(in srgb, var(--accent) 14%, transparent); transform: translateY(-0.18rem); }
-  .principle-cards article:hover { z-index: 1; background: var(--accent-soft); transform: translateY(-0.2rem); }
   .about-facts:hover, .project-card:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); box-shadow: var(--shadow); transform: translateY(-0.25rem); }
-  .direction-card:hover { box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--accent) 12%, transparent); transform: translateY(-0.2rem); }
+  .community-card:hover { box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--accent) 12%, transparent); transform: translateY(-0.2rem); }
 }
 
 .site-footer { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; padding-bottom: 2rem; color: var(--muted); font-family: var(--mono); font-size: 0.68rem; }
@@ -275,7 +269,6 @@ code { padding: 0.1rem 0.28rem; background: var(--surface-strong); color: var(--
   .writing-item > .text-link { grid-column: 2; justify-self: start; }
   .about-layout { grid-template-columns: 1fr; gap: 2rem; }
   .about-facts { max-width: 30rem; }
-  .principle-cards { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
