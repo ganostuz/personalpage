@@ -1,5 +1,6 @@
 (() => {
   const root = document.documentElement;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const toggle = document.querySelector('[data-theme-toggle]');
   const themeColor = document.querySelector('meta[name="theme-color"]');
   const supportedThemes = ['light', 'dark'];
@@ -81,8 +82,14 @@
   document.querySelectorAll('[data-tabs]').forEach((tabGroup) => {
     const tabs = [...tabGroup.querySelectorAll('[role="tab"]')];
     const panels = [...tabGroup.querySelectorAll('[role="tabpanel"]')];
+    const tabList = tabGroup.querySelector('[role="tablist"]');
+
+    tabList?.style.setProperty('--tab-count', tabs.length);
+    tabList?.style.setProperty('--active-tab', tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true'));
 
     const activateTab = (selectedTab) => {
+      tabList?.style.setProperty('--active-tab', tabs.indexOf(selectedTab));
+
       tabs.forEach((tab) => {
         const isSelected = tab === selectedTab;
         tab.setAttribute('aria-selected', String(isSelected));
@@ -114,13 +121,63 @@
     });
   });
 
+  const revealElements = [...document.querySelectorAll([
+    '.site-header',
+    '.hero > *',
+    '.numbered-heading',
+    '.experience',
+    '.featured-project',
+    '.section-intro',
+    '.writing-item',
+    '.section-link',
+    '.contact-section > *',
+    '.page-title',
+    '.page-intro',
+    '.about-layout',
+    '.about-section',
+    '.page-links',
+    '.project-card',
+    '.back-link',
+    '.article-header',
+    '.article-body',
+    '.site-footer',
+  ].join(','))];
+
+  if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+    root.classList.add('motion-ready');
+    let previousParent = null;
+    let staggerIndex = 0;
+
+    revealElements.forEach((element) => {
+      staggerIndex = element.parentElement === previousParent ? staggerIndex + 1 : 0;
+      previousParent = element.parentElement;
+      element.dataset.reveal = element.classList.contains('featured-project-reverse')
+        ? 'from-right'
+        : element.classList.contains('featured-project')
+          ? 'from-left'
+          : '';
+      element.style.setProperty('--reveal-delay', `${Math.min(staggerIndex, 4) * 65}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+    window.requestAnimationFrame(() => {
+      revealElements.forEach((element) => revealObserver.observe(element));
+    });
+  }
+
   const canvas = document.createElement('canvas');
   canvas.className = 'dot-grid';
   canvas.setAttribute('aria-hidden', 'true');
   document.body.prepend(canvas);
 
   const context = canvas.getContext('2d');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(pointer: fine)');
   const pointer = { x: 0, y: 0, active: false };
   let dots = [];
