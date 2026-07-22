@@ -152,9 +152,9 @@
   ].join(','))];
 
   if (!reducedMotion.matches && 'IntersectionObserver' in window) {
-    root.classList.add('motion-ready');
     let previousParent = null;
     let staggerIndex = 0;
+    const initialViewportBottom = window.innerHeight + 32;
 
     revealElements.forEach((element) => {
       staggerIndex = element.parentElement === previousParent ? staggerIndex + 1 : 0;
@@ -165,7 +165,11 @@
           ? 'from-left'
           : '';
       element.style.setProperty('--reveal-delay', `${Math.min(staggerIndex, 4) * 65}ms`);
+      const bounds = element.getBoundingClientRect();
+      if (bounds.top < initialViewportBottom && bounds.bottom > 0) element.classList.add('is-visible');
     });
+
+    root.classList.add('motion-ready');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
@@ -176,7 +180,7 @@
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 
     window.requestAnimationFrame(() => {
-      revealElements.forEach((element) => revealObserver.observe(element));
+      revealElements.filter((element) => !element.classList.contains('is-visible')).forEach((element) => revealObserver.observe(element));
     });
   }
 
