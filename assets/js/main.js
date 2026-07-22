@@ -83,12 +83,17 @@
     const tabs = [...tabGroup.querySelectorAll('[role="tab"]')];
     const panels = [...tabGroup.querySelectorAll('[role="tabpanel"]')];
     const tabList = tabGroup.querySelector('[role="tablist"]');
+    const getSelectedTab = () => tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0];
+    const updateTabIndicator = (tab) => {
+      if (!tabList || !tab) return;
+      tabList.style.setProperty('--tab-indicator-height', `${tab.offsetHeight}px`);
+      tabList.style.setProperty('--tab-indicator-y', `${tab.offsetTop}px`);
+    };
 
-    tabList?.style.setProperty('--tab-count', tabs.length);
-    tabList?.style.setProperty('--active-tab', tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true'));
+    window.requestAnimationFrame(() => updateTabIndicator(getSelectedTab()));
 
     const activateTab = (selectedTab) => {
-      tabList?.style.setProperty('--active-tab', tabs.indexOf(selectedTab));
+      updateTabIndicator(selectedTab);
 
       tabs.forEach((tab) => {
         const isSelected = tab === selectedTab;
@@ -119,6 +124,10 @@
         tabs[nextIndex].focus();
       });
     });
+
+    if ('ResizeObserver' in window && tabList) {
+      new ResizeObserver(() => updateTabIndicator(getSelectedTab())).observe(tabList);
+    }
   });
 
   const revealElements = [...document.querySelectorAll([

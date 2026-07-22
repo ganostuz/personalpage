@@ -78,9 +78,9 @@ h1, h2, h3 { line-height: 1.2; }
 .section-intro { max-width: 36rem; margin: -1.5rem 0 2.1rem; color: var(--muted); }
 
 .experience { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2.25rem; min-height: 18rem; }
-.experience-tabs { --active-tab: 0; --tab-count: 1; position: relative; display: flex; flex-direction: column; align-items: stretch; border-left: 2px solid var(--line); }
-.experience-tabs::before { position: absolute; z-index: 1; top: 0; left: -2px; width: 2px; height: calc(100% / var(--tab-count)); background: var(--accent); content: ""; transform: translateY(calc(var(--active-tab) * 100%)); transition: transform 360ms var(--ease-out); pointer-events: none; }
-.experience-tabs button { position: relative; padding: 0.8rem 1rem; border: 0; border-left: 2px solid transparent; margin-left: -2px; background: transparent; color: var(--muted); font-family: var(--mono); font-size: 0.72rem; text-align: left; cursor: pointer; transition: background-color var(--motion-fast) ease, color var(--motion-fast) ease, padding-left var(--motion-fast) var(--ease-out); }
+.experience-tabs { --tab-indicator-height: 0px; --tab-indicator-y: 0px; position: relative; display: flex; flex-direction: column; align-items: stretch; border-left: 2px solid var(--line); }
+.experience-tabs::before { position: absolute; z-index: 1; top: 0; left: -2px; width: 2px; height: var(--tab-indicator-height); background: var(--accent); content: ""; transform: translateY(var(--tab-indicator-y)); transition: height 260ms var(--ease-out), transform 360ms var(--ease-out); pointer-events: none; }
+.experience-tabs button { position: relative; padding: 0.8rem 1rem; border: 0; border-left: 2px solid transparent; margin-left: -2px; background: transparent; color: var(--muted); font-family: var(--mono); font-size: 0.72rem; text-align: left; cursor: pointer; transition: background-color var(--motion-fast) ease, color var(--motion-fast) ease; }
 .experience-tabs button:hover { background: var(--surface); color: var(--accent); }
 .experience-tabs button[aria-selected="true"] { border-left-color: transparent; background: var(--accent-soft); color: var(--accent-deep); }
 .experience-panel { max-width: 42rem; animation: panel-enter 360ms var(--ease-out) both; }
@@ -130,7 +130,7 @@ h1, h2, h3 { line-height: 1.2; }
 .muted { color: var(--muted); }
 
 .writing-list { border-top: 1px solid var(--line); }
-.writing-item { display: grid; grid-template-columns: 10rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); transition: transform var(--motion-fast) var(--ease-out), background-color var(--motion-fast) ease; }
+.writing-item { display: grid; grid-template-columns: 10rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .meta { margin: 0; color: var(--muted); font-family: var(--mono); font-size: 0.67rem; letter-spacing: 0.03em; text-transform: uppercase; }
 .writing-item h2, .writing-item h3 { margin: 0 0 0.3rem; font-size: 1.05rem; font-weight: 650; }
 .writing-item h2 a, .writing-item h3 a { text-decoration: none; }
@@ -231,7 +231,6 @@ code { padding: 0.1rem 0.28rem; background: var(--surface-strong); color: var(--
   .theme-toggle:hover { background: var(--accent-soft); transform: rotate(12deg) scale(1.05); }
   .social-link:hover { transform: translateY(-2px); }
   .social-link:hover svg { transform: scale(1.12) rotate(-3deg); }
-  .experience-tabs button:hover { padding-left: 1.2rem; }
   .featured-project:not(.featured-project-reverse) .project-visual:hover { transform: translateY(-0.35rem) rotate(-0.25deg); }
   .featured-project-reverse .project-visual:hover { transform: translateY(-0.35rem) rotate(0.25deg); }
   .project-visual:hover .mock-window { border-color: color-mix(in srgb, var(--accent) 65%, var(--line)); box-shadow: 0 24px 55px color-mix(in srgb, var(--accent) 16%, transparent); }
@@ -240,9 +239,10 @@ code { padding: 0.1rem 0.28rem; background: var(--surface-strong); color: var(--
   .project-visual:hover .mock-toolbar i:nth-child(2) { background: color-mix(in srgb, var(--accent) 55%, var(--line)); transform: scale(1.1); transition-delay: 40ms; }
   .project-visual:hover .mock-toolbar i:nth-child(3) { background: color-mix(in srgb, var(--accent) 30%, var(--line)); transform: scale(1.1); transition-delay: 80ms; }
   .mock-score:hover, .mock-row:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); transform: translateX(0.2rem); }
-  .featured-project-copy:hover .project-description { transform: translateY(-0.2rem); box-shadow: 0 22px 50px color-mix(in srgb, var(--accent) 14%, transparent); }
+  .featured-project-copy:hover .project-description { transform: translateY(-0.2rem); box-shadow: inset 3px 0 0 var(--accent), var(--shadow); }
   .text-link:hover span, .section-link:hover span { transform: translateX(0.24rem); }
-  .writing-item:hover { background: color-mix(in srgb, var(--surface) 55%, transparent); transform: translateX(0.25rem); }
+  .nav-list a[href$="/writing/"]:hover, .writing-item .text-link:hover span, .writing-section .section-link:hover span { transform: none; }
+  .nav-list a[href$="/writing/"].active:hover::after { transform: none; }
   .button-link:hover { box-shadow: 0 0.55rem 1.4rem color-mix(in srgb, var(--accent) 14%, transparent); transform: translateY(-0.18rem); }
   .principle-cards article:hover { z-index: 1; background: var(--accent-soft); transform: translateY(-0.2rem); }
   .about-facts:hover, .project-card:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); box-shadow: var(--shadow); transform: translateY(-0.25rem); }
