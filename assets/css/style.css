@@ -196,6 +196,14 @@ code { padding: 0.1rem 0.28rem; background: var(--surface-strong); color: var(--
 .article-body pre code { padding: 0; background: none; color: var(--text); }
 .article-callout { padding: 1.1rem 1.2rem; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); background: var(--accent-soft); font-family: var(--sans); font-size: 0.9em; }
 .article-callout p { margin: 0; }
+.demo-note { color: var(--muted); }
+.article-body table { width: 100%; margin: 0 0 1.45rem; border-collapse: collapse; font-family: var(--sans); font-size: 0.82em; }
+.article-body th, .article-body td { padding: 0.7rem 0.75rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.article-body th { color: var(--accent-deep); font-family: var(--mono); font-size: 0.8em; letter-spacing: 0.03em; text-transform: uppercase; }
+.highlight .c, .highlight .c1, .highlight .cm { color: var(--muted); }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .nt { color: var(--accent-deep); font-weight: 650; }
+.highlight .s, .highlight .s1, .highlight .s2 { color: var(--accent); }
+.highlight .mi, .highlight .mf, .highlight .kc { color: var(--accent-deep); }
 
 .site-footer { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; padding-bottom: 2rem; color: var(--muted); font-family: var(--mono); font-size: 0.68rem; }
 .site-footer p { margin: 0; }
@@ -242,6 +250,8 @@ code { padding: 0.1rem 0.28rem; background: var(--surface-strong); color: var(--
   .writing-item > .text-link { display: inline-block; margin-top: 0.7rem; }
   .project-details { grid-template-columns: 1fr; }
   .article-header h1 { font-size: 2.2rem; }
+  .article-body { overflow-wrap: anywhere; }
+  .article-body table { display: block; overflow-x: auto; white-space: nowrap; }
   .site-footer { align-items: flex-start; flex-direction: column; }
 }
 

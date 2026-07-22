@@ -1,64 +1,43 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About Stanislav Guzej, a final-year computer science student interested in reliable AI and LLM systems.">
-    <meta name="theme-color" content="#f7f7f5">
-    <title>About — Stanislav Guzej</title>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="About — Stanislav Guzej">
-    <meta property="og:description" content="A final-year computer science student interested in reliable AI and LLM systems.">
-    <meta property="og:url" content="https://stanislavguzej.dev/about.html">
-    <meta property="og:image" content="https://stanislavguzej.dev/assets/img/og-card.svg">
-    <link rel="canonical" href="https://stanislavguzej.dev/about.html">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#content">Skip to content</a>
-    <header class="site-header wrapper">
-      <a class="wordmark" href="index.html" aria-label="Stanislav Guzej home">Stanislav Guzej</a>
-      <nav aria-label="Primary navigation"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a href="writing/index.html">Writing</a></li><li><a href="projects.html">Projects</a></li><li><a class="active" href="about.html" aria-current="page">About</a></li></ul></nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><span aria-hidden="true">◐</span></button>
-    </header>
-    <main id="content" class="wrapper prose-page about-page">
-      <header class="about-header">
-        <h1 class="page-title">About</h1>
-        <p class="page-intro">I’m Stanislav, a computer science student interested in making AI systems easier to understand, test, and trust.</p>
-      </header>
-      <div class="about-layout">
-        <div class="prose about-copy">
-          <p>I’m in the final year of my BSc at the Faculty of Informatics, Masaryk University. Alongside my studies, I work part-time at Lexical Computing, where I’m building an automated LLM testing suite as my bachelor’s thesis.</p>
-          <p>I’m drawn to the practical side of AI: finding where language-model systems fail, designing evaluations that reveal something useful, and turning the results into better engineering decisions.</p>
-          <p>I like taking an unclear question, shaping it into a small experiment, and iterating until the result is understandable enough for someone else to use and improve.</p>
-        </div>
-        <aside class="about-facts" aria-label="At a glance">
-          <p class="facts-label">At a glance</p>
-          <dl>
-            <div><dt>Based in</dt><dd>Brno, Czechia</dd></div>
-            <div><dt>Current work</dt><dd>Lexical Computing</dd></div>
-            <div><dt>Focus</dt><dd>LLM evaluation and testing</dd></div>
-          </dl>
-          <a class="text-link" href="mailto:guzej.sta@gmail.com">Email me <span aria-hidden="true">→</span></a>
-        </aside>
-      </div>
-      <section class="about-section" aria-labelledby="principles-heading">
-        <div class="numbered-heading"><h2 id="principles-heading">Working principles</h2><span aria-hidden="true"></span></div>
-        <div class="principle-cards">
-          <article><h3>Be concrete</h3><p>Start with real examples and observable behaviour before reaching for a broad metric.</p></article>
-          <article><h3>Learn in public</h3><p>Write down the decisions, the surprises, and the useful bits that are worth revisiting.</p></article>
-          <article><h3>Own the details</h3><p>Reliable systems come from respecting the unglamorous edges as much as the central idea.</p></article>
-        </div>
-      </section>
-      <section class="about-section" aria-labelledby="direction-heading">
-        <div class="numbered-heading"><h2 id="direction-heading">Where I’m heading</h2><span aria-hidden="true"></span></div>
-        <div class="direction-card">
-          <p>I want to keep working on AI systems where evaluation is part of product engineering, not an afterthought. I’m especially drawn to small teams, meaningful ownership, and technical problems that reward careful thinking.</p>
-        </div>
-      </section>
-      <div class="page-links"><a class="text-link" href="projects.html">See projects <span aria-hidden="true">→</span></a><a class="text-link" href="writing/index.html">Read writing <span aria-hidden="true">→</span></a></div>
-    </main>
-    <footer class="site-footer wrapper"><p>© <span data-current-year></span> Stanislav Guzej</p><a href="mailto:guzej.sta@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></footer>
-  </body>
-</html>
+---
+layout: default
+nav: about
+title: About
+description: About Stanislav Guzej, a final-year computer science student interested in reliable AI and LLM systems.
+permalink: /about/
+---
+<main id="content" class="wrapper prose-page about-page">
+  <header class="about-header">
+    <h1 class="page-title">About</h1>
+    <p class="page-intro">I’m Stanislav, a computer science student interested in making AI systems easier to understand, test, and trust.</p>
+  </header>
+  <div class="about-layout">
+    <div class="prose about-copy">
+      <p>I’m in the final year of my BSc at the Faculty of Informatics, Masaryk University. Alongside my studies, I work part-time at Lexical Computing, where I’m building an automated LLM testing suite as my bachelor’s thesis.</p>
+      <p>I’m drawn to the practical side of AI: finding where language-model systems fail, designing evaluations that reveal something useful, and turning the results into better engineering decisions.</p>
+      <p>I like taking an unclear question, shaping it into a small experiment, and iterating until the result is understandable enough for someone else to use and improve.</p>
+    </div>
+    <aside class="about-facts" aria-label="At a glance">
+      <p class="facts-label">At a glance</p>
+      <dl>
+        <div><dt>Based in</dt><dd>Brno, Czechia</dd></div>
+        <div><dt>Originally from</dt><dd>Košice, Slovakia</dd></div>
+        <div><dt>Current work</dt><dd>Lexical Computing</dd></div>
+        <div><dt>Focus</dt><dd>LLM evaluation and testing</dd></div>
+      </dl>
+      <a class="text-link" href="mailto:{{ site.email }}">Email me <span aria-hidden="true">→</span></a>
+    </aside>
+  </div>
+  <section class="about-section" aria-labelledby="principles-heading">
+    <div class="numbered-heading"><h2 id="principles-heading">Working principles</h2><span aria-hidden="true"></span></div>
+    <div class="principle-cards">
+      <article><h3>Be concrete</h3><p>Start with real examples and observable behaviour before reaching for a broad metric.</p></article>
+      <article><h3>Learn in public</h3><p>Write down the decisions, the surprises, and the useful bits that are worth revisiting.</p></article>
+      <article><h3>Own the details</h3><p>Reliable systems come from respecting the unglamorous edges as much as the central idea.</p></article>
+    </div>
+  </section>
+  <section class="about-section" aria-labelledby="direction-heading">
+    <div class="numbered-heading"><h2 id="direction-heading">Where I’m heading</h2><span aria-hidden="true"></span></div>
+    <div class="direction-card"><p>I want to keep working on AI systems where evaluation is part of product engineering, not an afterthought. I’m especially drawn to small teams, meaningful ownership, and technical problems that reward careful thinking.</p></div>
+  </section>
+  <div class="page-links"><a class="text-link" href="{{ '/projects/' | relative_url }}">See projects <span aria-hidden="true">→</span></a><a class="text-link" href="{{ '/writing/' | relative_url }}">Read writing <span aria-hidden="true">→</span></a></div>
+</main>

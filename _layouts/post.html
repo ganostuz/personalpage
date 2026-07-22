@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign word_count = content | number_of_words %}
+{% assign reading_time = word_count | plus: 199 | divided_by: 200 %}
+<main id="content" class="article-page">
+  <article class="article-content">
+    <a class="back-link" href="{{ '/writing/' | relative_url }}">← Back to writing</a>
+    <header class="article-header">
+      <p class="article-topic">{{ page.topic }}{% if page.demo %} · Demo writing{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="article-dek">{{ page.description }}</p>
+      <p class="meta">{{ page.date | date: "%B %-d, %Y" }} · {{ reading_time }} min read</p>
+    </header>
+    <div class="article-body">
+      {% if page.demo %}
+        <aside class="article-callout demo-note"><p><strong>Demo article:</strong> This is example content created to preview the writing system and article styling. Replace it when publishing verified work.</p></aside>
+      {% endif %}
+      {{ content }}
+    </div>
+  </article>
+</main>

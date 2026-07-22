@@ -1,0 +1,29 @@
+title: Stanislav Guzej
+description: Final-year computer science student building reliable evaluation and testing for AI and LLM systems.
+url: https://stanislavguzej.dev
+baseurl: ""
+lang: en
+timezone: Europe/Bratislava
+email: guzej.sta@gmail.com
+
+permalink: /writing/:title/
+future: false
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: writing
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - WRITING.md
+  - vendor

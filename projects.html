@@ -1,49 +1,29 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Projects by Stanislav Guzej, focused on reliable evaluation and testing of AI and LLM systems.">
-    <meta name="theme-color" content="#f7f7f5">
-    <title>Projects — Stanislav Guzej</title>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Projects — Stanislav Guzej">
-    <meta property="og:description" content="Technical work focused on reliable evaluation and testing of AI and LLM systems.">
-    <meta property="og:url" content="https://stanislavguzej.dev/projects.html">
-    <meta property="og:image" content="https://stanislavguzej.dev/assets/img/og-card.svg">
-    <link rel="canonical" href="https://stanislavguzej.dev/projects.html">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#content">Skip to content</a>
-    <header class="site-header wrapper">
-      <a class="wordmark" href="index.html" aria-label="Stanislav Guzej home">Stanislav Guzej</a>
-      <nav aria-label="Primary navigation"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a href="writing/index.html">Writing</a></li><li><a class="active" href="projects.html" aria-current="page">Projects</a></li><li><a href="about.html">About</a></li></ul></nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><span aria-hidden="true">◐</span></button>
-    </header>
-    <main id="content" class="wrapper prose-page projects-page">
-      <h1 class="page-title">Projects</h1>
-      <p class="page-intro">Projects that explore how AI systems can become more observable, testable, and useful in practice.</p>
-      <div class="project-stack">
-        <article class="project-card project-card-featured full-card">
-          <div class="card-topline"><p class="meta">In progress · Bachelor’s thesis</p><span class="status-badge">Current</span></div>
-          <h2>Automated LLM testing suite</h2>
-          <p>Developed at Lexical Computing, this project turns expected LLM behaviour into a repeatable testing workflow. The aim is to make regression checks and evaluation results easier to run, inspect, and act on.</p>
-          <div class="project-details"><div><span>Problem</span><p>LLM behaviour is hard to compare consistently as prompts, models, and product requirements change.</p></div><div><span>Approach</span><p>Capture representative scenarios, evaluate outputs against clear expectations, and make results visible to the team.</p></div></div>
-          <ul class="tag-list" aria-label="Project technologies"><li>LLMs</li><li>Evaluation</li><li>Testing</li></ul>
-          <p class="muted">Repository and detailed project notes will be linked after public clearance is confirmed.</p>
-        </article>
-        <article class="project-card full-card">
-          <div class="card-topline"><p class="meta">Concept project · Draft</p><span class="status-badge status-badge-muted">Example</span></div>
-          <h2>Scenario lab</h2>
-          <p>A lightweight workspace for comparing models and prompts against the same set of realistic user requests. It pairs a quick quantitative view with examples that make the difference between two runs easy to see.</p>
-          <div class="project-details"><div><span>Question</span><p>How can a developer tell whether a change made an experience better, not merely different?</p></div><div><span>Approach</span><p>Run controlled scenarios, annotate notable outputs, and keep a reviewable history of the decisions.</p></div></div>
-          <ul class="tag-list" aria-label="Project technologies"><li>Python</li><li>Prompting</li><li>Analysis</li></ul>
-          <p class="muted">This is draft content used to demonstrate the portfolio format.</p>
-        </article>
-      </div>
-    </main>
-    <footer class="site-footer wrapper"><p>© <span data-current-year></span> Stanislav Guzej</p><a href="mailto:guzej.sta@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></footer>
-  </body>
-</html>
+---
+layout: default
+nav: projects
+title: Projects
+description: Projects by Stanislav Guzej, focused on reliable evaluation and testing of AI and LLM systems.
+permalink: /projects/
+---
+<main id="content" class="wrapper prose-page projects-page">
+  <h1 class="page-title">Projects</h1>
+  <p class="page-intro">Projects that explore how AI systems can become more observable, testable, and useful in practice.</p>
+  <div class="project-stack">
+    <article class="project-card project-card-featured full-card">
+      <div class="card-topline"><p class="meta">In progress · Bachelor’s thesis</p><span class="status-badge">Current</span></div>
+      <h2>Automated LLM testing suite</h2>
+      <p>Developed at Lexical Computing, this project turns expected LLM behaviour into a repeatable testing workflow. The aim is to make regression checks and evaluation results easier to run, inspect, and act on.</p>
+      <div class="project-details"><div><span>Problem</span><p>LLM behaviour is hard to compare consistently as prompts, models, and product requirements change.</p></div><div><span>Approach</span><p>Capture representative scenarios, evaluate outputs against clear expectations, and make results visible to the team.</p></div></div>
+      <ul class="tag-list" aria-label="Project technologies"><li>LLMs</li><li>Evaluation</li><li>Testing</li></ul>
+      <p class="muted">Repository and detailed project notes will be linked after public clearance is confirmed.</p>
+    </article>
+    <article class="project-card full-card">
+      <div class="card-topline"><p class="meta">Concept project · Draft</p><span class="status-badge status-badge-muted">Example</span></div>
+      <h2>Scenario lab</h2>
+      <p>A lightweight workspace for comparing models and prompts against the same set of realistic user requests. It pairs a quick quantitative view with examples that make the difference between two runs easy to see.</p>
+      <div class="project-details"><div><span>Question</span><p>How can a developer tell whether a change made an experience better, not merely different?</p></div><div><span>Approach</span><p>Run controlled scenarios, annotate notable outputs, and keep a reviewable history of the decisions.</p></div></div>
+      <ul class="tag-list" aria-label="Project technologies"><li>Python</li><li>Prompting</li><li>Analysis</li></ul>
+      <p class="muted">This is draft content used to demonstrate the portfolio format.</p>
+    </article>
+  </div>
+</main>
