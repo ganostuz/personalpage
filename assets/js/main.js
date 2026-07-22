@@ -131,7 +131,6 @@
   });
 
   const revealElements = [...document.querySelectorAll([
-    '.site-header',
     '.hero > *',
     '.numbered-heading',
     '.experience',
