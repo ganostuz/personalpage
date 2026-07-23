@@ -1,0 +1,70 @@
+---
+layout: default
+title: Tetris
+description: A small hidden Tetris game built into Stanislav Guzej's personal site.
+permalink: /tetris/
+robots: noindex, nofollow
+stylesheet: /assets/css/tetris.css
+script: /assets/js/tetris.js
+---
+<main id="content" class="tetris-page wrapper">
+  <header class="tetris-intro">
+    <p class="game-kicker">A hidden side project</p>
+    <h1 class="page-title">Tetris</h1>
+    <p>Clear lines, raise the level, and try not to build yourself into a corner.</p>
+  </header>
+
+  <section class="tetris-shell" aria-label="Tetris game">
+    <div class="tetris-board-wrap">
+      <canvas id="tetris-board" width="300" height="600" aria-label="Tetris board" role="img">
+        Your browser needs canvas support to play this game.
+      </canvas>
+      <div class="game-overlay" data-game-overlay>
+        <div>
+          <p class="game-overlay-label" data-overlay-label>Ready?</p>
+          <p data-overlay-message>Use the keyboard or controls below.</p>
+          <button class="game-primary-button" type="button" data-game-start>Start game</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="tetris-panel" aria-label="Game information">
+      <div class="game-stats">
+        <div><span>Score</span><strong data-score>0</strong></div>
+        <div><span>Lines</span><strong data-lines>0</strong></div>
+        <div><span>Level</span><strong data-level>1</strong></div>
+      </div>
+
+      <div class="next-piece-card">
+        <span>Next piece</span>
+        <canvas id="tetris-next" width="120" height="120" aria-label="Next Tetris piece" role="img">
+          Next-piece preview.
+        </canvas>
+      </div>
+
+      <div class="keyboard-guide" aria-label="Keyboard controls">
+        <p>Keyboard</p>
+        <dl>
+          <div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Move</dd></div>
+          <div><dt><kbd>↑</kbd> / <kbd>Z</kbd></dt><dd>Rotate</dd></div>
+          <div><dt><kbd>↓</kbd></dt><dd>Soft drop</dd></div>
+          <div><dt><kbd>Space</kbd></dt><dd>Hard drop</dd></div>
+          <div><dt><kbd>P</kbd></dt><dd>Pause</dd></div>
+        </dl>
+      </div>
+
+      <button class="game-secondary-button" type="button" data-game-restart>Restart game</button>
+    </aside>
+
+    <div class="game-controls" aria-label="On-screen game controls">
+      <button type="button" data-game-action="left" aria-label="Move piece left"><span aria-hidden="true">←</span><small>Left</small></button>
+      <button type="button" data-game-action="rotate" aria-label="Rotate piece clockwise"><span aria-hidden="true">↻</span><small>Rotate</small></button>
+      <button type="button" data-game-action="right" aria-label="Move piece right"><span aria-hidden="true">→</span><small>Right</small></button>
+      <button type="button" data-game-action="down" aria-label="Move piece down"><span aria-hidden="true">↓</span><small>Down</small></button>
+      <button type="button" data-game-action="drop" aria-label="Hard drop piece"><span aria-hidden="true">⇣</span><small>Drop</small></button>
+      <button type="button" data-game-action="pause" aria-label="Pause or resume game"><span aria-hidden="true">Ⅱ</span><small>Pause</small></button>
+    </div>
+  </section>
+
+  <p class="game-status" data-game-status aria-live="polite">Game ready.</p>
+</main>
