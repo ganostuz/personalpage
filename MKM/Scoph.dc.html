@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCOPH — Public Health · MKM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulsering{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.8);opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+body{margin:0;background:#f6f0fb;font-family:'Archivo',sans-serif;color:#1c0d2b;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+*{box-sizing:border-box}
+::selection{background:#7c1fd0;color:#fff}
+.poster{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.9}
+.scoph-ph{background:#e4d3f2;background-image:radial-gradient(#7c1fd0 1.4px,transparent 1.5px);background-size:12px 12px;background-color:#e9dcf4;position:relative}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media(max-width:880px){.scoph-2col{grid-template-columns:1fr!important}.scoph-g3{grid-template-columns:1fr!important}.scoph-g4{grid-template-columns:1fr 1fr!important}.scoph-hero h1{font-size:19vw!important}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:60;background:#7c1fd0;color:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:13px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;font-weight:800;font-size:1rem;color:#fff">
+      <span class="poster" style="width:34px;height:34px;background:#fff;color:#7c1fd0;display:grid;place-items:center;flex:none;font-size:1.2rem">M</span>MKM <span style="opacity:.7">/ SCOPH</span>
+    </a>
+    <nav style="display:flex;gap:20px;flex-wrap:wrap;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em">
+      <a href="#mission" style="color:rgba(255,255,255,.8)">Mission</a>
+      <a href="#gallery" style="color:rgba(255,255,255,.8)">Gallery</a>
+      <a href="#news" style="color:rgba(255,255,255,.8)">News</a>
+      <a href="#members" style="color:rgba(255,255,255,.8)">Team</a>
+      <a href="#contact" style="background:#fff;color:#7c1fd0;padding:7px 15px;border-radius:4px">Join →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO poster -->
+<section class="scoph-hero" style="position:relative;overflow:hidden;background:#7c1fd0;color:#fff;padding:64px 30px 74px" data-screen-label="Hero">
+  <div aria-hidden="true" style="position:absolute;right:-60px;top:-60px;width:320px;height:320px;border-radius:50%;background:#ffd23f;opacity:.9"></div>
+  <div aria-hidden="true" style="position:absolute;right:120px;bottom:-40px;width:120px;height:120px;background:#ff5e8a;transform:rotate(45deg)"></div>
+  <div style="position:relative;max-width:1240px;margin:0 auto">
+    <span style="display:inline-block;background:#1c0d2b;color:#ffd23f;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;animation:slideIn .6s both">Standing Committee on Public Health</span>
+    <h1 class="poster scoph-hero" style="font-size:clamp(3.4rem,14vw,11rem);margin:22px 0 0;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both .1s">Prevention<br><span style="color:#ffd23f">is power.</span></h1>
+    <div class="scoph-2col" style="display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end;margin-top:26px">
+      <p style="font-size:1.25rem;line-height:1.5;max-width:46ch;margin:0;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both .2s">Community screening days, health campaigns and outreach in underserved areas — we bring prevention to where people already are.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both .3s">
+        <a href="#contact" style="padding:15px 26px;background:#ffd23f;color:#1c0d2b;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:.9rem">Volunteer →</a>
+        <a href="#gallery" style="padding:15px 26px;border:2px solid #fff;color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:.9rem">Our work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ticker -->
+<div style="background:#ffd23f;color:#1c0d2b;overflow:hidden;white-space:nowrap;border-top:3px solid #1c0d2b;border-bottom:3px solid #1c0d2b">
+  <div class="poster" style="display:inline-flex;gap:30px;padding:10px 0;animation:marq 20s linear infinite;font-size:1.3rem">
+    <span>Screen ● Prevent ● Educate ● Reach ● Screen ● Prevent ● Educate ● Reach ● Screen ● Prevent ● Educate ● Reach ●&nbsp;</span>
+    <span>Screen ● Prevent ● Educate ● Reach ● Screen ● Prevent ● Educate ● Reach ● Screen ● Prevent ● Educate ● Reach ●&nbsp;</span>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section id="mission" style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Mission">
+  <div class="scoph-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
+    <div>
+      <span style="font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7c1fd0">Our mission</span>
+      <h2 class="poster" style="font-size:clamp(2.4rem,5.5vw,4rem);margin:14px 0 16px">The healthiest fix is prevention.</h2>
+      <p style="font-size:1.1rem;line-height:1.6;color:#4a3559;margin:0">Delivered where people already gather — markets, town squares, community centres. We meet people where they are, not where the system expects them to be.</p>
+    </div>
+    <div style="display:grid;gap:0;border:3px solid #1c0d2b">
+      <div style="display:flex;gap:18px;padding:22px;border-bottom:3px solid #1c0d2b;align-items:center"><span class="poster" style="font-size:2rem;color:#7c1fd0;min-width:44px">01</span><div><h4 style="margin:0 0 3px">Community screening days</h4><p style="margin:0;font-size:.94rem;color:#4a3559">Free blood pressure, glucose and basic checks in public spaces.</p></div></div>
+      <div style="display:flex;gap:18px;padding:22px;border-bottom:3px solid #1c0d2b;align-items:center"><span class="poster" style="font-size:2rem;color:#7c1fd0;min-width:44px">02</span><div><h4 style="margin:0 0 3px">Health promotion campaigns</h4><p style="margin:0;font-size:.94rem;color:#4a3559">Seasonal drives on nutrition, vaccination and mental health.</p></div></div>
+      <div style="display:flex;gap:18px;padding:22px;align-items:center"><span class="poster" style="font-size:2rem;color:#7c1fd0;min-width:44px">03</span><div><h4 style="margin:0 0 3px">Outreach in underserved areas</h4><p style="margin:0;font-size:.94rem;color:#4a3559">Partnering with local orgs to reach limited-access communities.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS -->
+<section style="background:#1c0d2b;color:#fff" data-screen-label="Focus areas">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 30px">
+    <h2 class="poster" style="font-size:clamp(2rem,5vw,3.4rem);margin:0 0 30px">Three ways we act</h2>
+    <div class="scoph-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <article style="background:#7c1fd0;padding:32px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between"><span class="poster" style="font-size:3rem;color:#ffd23f">A</span><div><h3 class="poster" style="font-size:1.5rem;margin:0 0 8px">Screening days</h3><p style="margin:0;font-size:.95rem;color:rgba(255,255,255,.85)">Pop-up health checks in markets, squares and community centres.</p></div></article>
+      <article style="background:#ff5e8a;padding:32px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;color:#1c0d2b"><span class="poster" style="font-size:3rem;color:#1c0d2b">B</span><div><h3 class="poster" style="font-size:1.5rem;margin:0 0 8px">Awareness campaigns</h3><p style="margin:0;font-size:.95rem;color:rgba(28,13,43,.8)">Posters, talks and social pushes timed to health calendars.</p></div></article>
+      <article style="background:#ffd23f;padding:32px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;color:#1c0d2b"><span class="poster" style="font-size:3rem;color:#7c1fd0">C</span><div><h3 class="poster" style="font-size:1.5rem;margin:0 0 8px">Community outreach</h3><p style="margin:0;font-size:.95rem;color:rgba(28,13,43,.8)">Regular visits to shelters and low-income neighbourhoods.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Gallery">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;margin-bottom:24px">
+    <h2 class="poster" style="font-size:clamp(2rem,5vw,3.4rem);margin:0">On the ground</h2>
+    <span style="color:#7c1fd0;font-weight:700;font-size:.9rem">Swap in your campaign photos later</span>
+  </div>
+  <div class="scoph-g4" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px">
+    <figure class="scoph-ph" style="margin:0;grid-column:span 2;grid-row:span 2;border:3px solid #1c0d2b"><span style="position:absolute;left:12px;bottom:12px;background:#7c1fd0;color:#fff;font-size:.66rem;font-weight:700;padding:4px 9px;text-transform:uppercase">Screening day</span></figure>
+    <figure class="scoph-ph" style="margin:0;border:3px solid #1c0d2b"></figure>
+    <figure class="scoph-ph" style="margin:0;border:3px solid #1c0d2b"></figure>
+    <figure class="scoph-ph" style="margin:0;grid-column:span 2;border:3px solid #1c0d2b"><span style="position:absolute;left:12px;bottom:12px;background:#ff5e8a;color:#1c0d2b;font-size:.66rem;font-weight:700;padding:4px 9px;text-transform:uppercase">Outreach</span></figure>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" style="background:#e9dcf4" data-screen-label="News">
+  <div style="max-width:1240px;margin:0 auto;padding:76px 30px">
+    <h2 class="poster" style="font-size:clamp(2rem,5vw,3.4rem);margin:0 0 28px">Latest news</h2>
+    <div class="scoph-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <article style="background:#fff;border:3px solid #1c0d2b"><div class="scoph-ph" style="aspect-ratio:16/10;border-bottom:3px solid #1c0d2b"></div><div style="padding:22px"><span style="display:inline-block;background:#7c1fd0;color:#fff;font-size:.68rem;font-weight:700;text-transform:uppercase;padding:4px 10px">Campaign</span><h3 style="font-size:1.2rem;margin:12px 0 8px">Screened 400 people in one weekend</h3><p style="margin:0;color:#4a3559;font-size:.93rem">Our biggest community screening day so far.</p></div></article>
+      <article style="background:#fff;border:3px solid #1c0d2b"><div class="scoph-ph" style="aspect-ratio:16/10;border-bottom:3px solid #1c0d2b"></div><div style="padding:22px"><span style="display:inline-block;background:#ff5e8a;color:#1c0d2b;font-size:.68rem;font-weight:700;text-transform:uppercase;padding:4px 10px">Program</span><h3 style="font-size:1.2rem;margin:12px 0 8px">Vaccination awareness week</h3><p style="margin:0;color:#4a3559;font-size:.93rem">Campus-wide push with local health authorities.</p></div></article>
+      <article style="background:#fff;border:3px solid #1c0d2b"><div class="scoph-ph" style="aspect-ratio:16/10;border-bottom:3px solid #1c0d2b"></div><div style="padding:22px"><span style="display:inline-block;background:#ffd23f;color:#1c0d2b;font-size:.68rem;font-weight:700;text-transform:uppercase;padding:4px 10px">Partner</span><h3 style="font-size:1.2rem;margin:12px 0 8px">New shelter outreach program</h3><p style="margin:0;color:#4a3559;font-size:.93rem">Monthly health visits begin this spring.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Timeline">
+  <h2 class="poster" style="font-size:clamp(2rem,5vw,3.4rem);margin:0 0 34px">The story so far</h2>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:4px solid #7c1fd0" class="scoph-g4">
+    <div style="padding:24px 20px;border-right:3px solid #1c0d2b"><div class="poster" style="font-size:2rem;color:#7c1fd0">2021</div><h4 style="margin:8px 0 4px">First screening day</h4><p style="margin:0;color:#4a3559;font-size:.9rem">A pilot in one town square.</p></div>
+    <div style="padding:24px 20px;border-right:3px solid #1c0d2b"><div class="poster" style="font-size:2rem;color:#7c1fd0">2023</div><h4 style="margin:8px 0 4px">Campaigns launch</h4><p style="margin:0;color:#4a3559;font-size:.9rem">Awareness drives across campus.</p></div>
+    <div style="padding:24px 20px;border-right:3px solid #1c0d2b"><div class="poster" style="font-size:2rem;color:#7c1fd0">2024</div><h4 style="margin:8px 0 4px">Outreach begins</h4><p style="margin:0;color:#4a3559;font-size:.9rem">Regular shelter visits start.</p></div>
+    <div style="padding:24px 20px"><div class="poster" style="font-size:2rem;color:#7c1fd0">2026</div><h4 style="margin:8px 0 4px">Thousands reached</h4><p style="margin:0;color:#4a3559;font-size:.9rem">Screening days across the region.</p></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section style="background:#7c1fd0;color:#fff" data-screen-label="Reviews">
+  <div style="max-width:1240px;margin:0 auto;padding:76px 30px">
+    <h2 class="poster" style="font-size:clamp(2rem,5vw,3.4rem);margin:0 0 28px">Voices</h2>
+    <div class="scoph-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <figure style="margin:0;background:#1c0d2b;padding:28px"><div class="poster" style="font-size:2.4rem;color:#ffd23f;line-height:.5;height:24px">"</div><p style="font-size:1.02rem;line-height:1.5;margin:16px 0 16px">"Standing in a town square taking blood pressure taught me more about access to care than any lecture."</p><figcaption style="font-size:.85rem;color:#ffd23f;font-weight:700">— Volunteer · 2nd year</figcaption></figure>
+      <figure style="margin:0;background:#1c0d2b;padding:28px"><div class="poster" style="font-size:2.4rem;color:#ff5e8a;line-height:.5;height:24px">"</div><p style="font-size:1.02rem;line-height:1.5;margin:16px 0 16px">"They caught my high blood pressure at the market. I'd never have gone to a clinic for it."</p><figcaption style="font-size:.85rem;color:#ff5e8a;font-weight:700">— Community member</figcaption></figure>
+      <figure style="margin:0;background:#1c0d2b;padding:28px"><div class="poster" style="font-size:2.4rem;color:#ffd23f;line-height:.5;height:24px">"</div><p style="font-size:1.02rem;line-height:1.5;margin:16px 0 16px">"The vaccination campaign reached students nothing else was getting through to."</p><figcaption style="font-size:.85rem;color:#ffd23f;font-weight:700">— Campus health office</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members" style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Members">
+  <h2 class="poster" style="font-size:clamp(2rem,5vw,3.4rem);margin:0 0 26px">The team</h2>
+  <div class="scoph-g4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+    <article style="border:3px solid #1c0d2b"><div class="scoph-ph" style="aspect-ratio:1"></div><div style="padding:14px 16px"><h4 style="margin:0;font-size:1.05rem">Zuzana Halová</h4><p style="margin:4px 0 0;font-size:.82rem;color:#7c1fd0;font-weight:700;text-transform:uppercase">Chair · 5th yr</p></div></article>
+    <article style="border:3px solid #1c0d2b"><div class="scoph-ph" style="aspect-ratio:1"></div><div style="padding:14px 16px"><h4 style="margin:0;font-size:1.05rem">Martin Šef</h4><p style="margin:4px 0 0;font-size:.82rem;color:#7c1fd0;font-weight:700;text-transform:uppercase">Screening · 4th yr</p></div></article>
+    <article style="border:3px solid #1c0d2b"><div class="scoph-ph" style="aspect-ratio:1"></div><div style="padding:14px 16px"><h4 style="margin:0;font-size:1.05rem">Ivana Krajčí</h4><p style="margin:4px 0 0;font-size:.82rem;color:#7c1fd0;font-weight:700;text-transform:uppercase">Campaigns · 3rd yr</p></div></article>
+    <article style="border:3px solid #1c0d2b"><div class="scoph-ph" style="aspect-ratio:1"></div><div style="padding:14px 16px"><h4 style="margin:0;font-size:1.05rem">Roman Datel</h4><p style="margin:4px 0 0;font-size:.82rem;color:#7c1fd0;font-weight:700;text-transform:uppercase">Outreach · 4th yr</p></div></article>
+  </div>
+</section>
+
+<!-- WHERE WE ARE -->
+<section style="background:#e9dcf4" data-screen-label="Where we are">
+  <div class="scoph-2col" style="max-width:1240px;margin:0 auto;padding:76px 30px;display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center">
+    <div>
+      <span style="font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7c1fd0">Where we are</span>
+      <h2 class="poster" style="font-size:clamp(2rem,4.5vw,3.2rem);margin:12px 0 14px">Out in the community</h2>
+      <p style="color:#4a3559;line-height:1.6;margin:0 0 22px">Every ring is a place we've held a screening day or campaign. We go where care is hardest to reach.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-weight:700">
+        <div style="display:flex;justify-content:space-between;background:#fff;border:2px solid #1c0d2b;padding:11px 15px"><span>Markets</span><b style="color:#7c1fd0">12</b></div>
+        <div style="display:flex;justify-content:space-between;background:#fff;border:2px solid #1c0d2b;padding:11px 15px"><span>Shelters</span><b style="color:#7c1fd0">06</b></div>
+        <div style="display:flex;justify-content:space-between;background:#fff;border:2px solid #1c0d2b;padding:11px 15px"><span>Campuses</span><b style="color:#7c1fd0">04</b></div>
+        <div style="display:flex;justify-content:space-between;background:#fff;border:2px solid #1c0d2b;padding:11px 15px"><span>Total</span><b style="color:#7c1fd0">22</b></div>
+      </div>
+    </div>
+    <div style="position:relative;aspect-ratio:16/11;background:#fff;border:3px solid #1c0d2b;overflow:hidden">
+      <span style="position:absolute;left:24%;top:36%;width:16px;height:16px;border-radius:50%;background:#7c1fd0"></span><span style="position:absolute;left:24%;top:36%;width:16px;height:16px;border-radius:50%;background:#7c1fd0;animation:pulsering 2.4s ease-out infinite"></span>
+      <span style="position:absolute;left:56%;top:26%;width:16px;height:16px;border-radius:50%;background:#ff5e8a"></span>
+      <span style="position:absolute;left:44%;top:60%;width:16px;height:16px;border-radius:50%;background:#7c1fd0"></span><span style="position:absolute;left:44%;top:60%;width:16px;height:16px;border-radius:50%;background:#7c1fd0;animation:pulsering 2.4s ease-out infinite .8s"></span>
+      <span style="position:absolute;left:74%;top:56%;width:16px;height:16px;border-radius:50%;background:#ffb400"></span>
+      <span style="position:absolute;right:10px;bottom:8px;font-size:.66rem;color:#8a72a0">illustrative</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:#1c0d2b;color:#fff" data-screen-label="Contact">
+  <div class="scoph-2col" style="max-width:1240px;margin:0 auto;padding:80px 30px;display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start">
+    <div>
+      <span style="font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffd23f">Get involved</span>
+      <h2 class="poster" style="font-size:clamp(2.4rem,5.5vw,4rem);margin:14px 0 16px">Come stand with us.</h2>
+      <p style="color:#c4b2d6;line-height:1.6;margin:0 0 24px">Volunteer for a screening day, host a campaign, or partner up. Tell us what you're interested in and we'll reply within a few days.</p>
+      <div style="font-weight:700;color:#ffd23f;line-height:2">scoph@mkm.example<br>@mkm.scoph</div>
+    </div>
+    <div style="background:#fff;padding:38px;color:#1c0d2b;border:4px solid #ffd23f">
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <form onSubmit="{{ onSubmit }}">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div style="margin-bottom:16px"><label style="display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;margin-bottom:7px">Name *</label><input required placeholder="Your name" style="width:100%;padding:13px 15px;border:2px solid #1c0d2b;font-size:.98rem;font-family:inherit"></div>
+            <div style="margin-bottom:16px"><label style="display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;margin-bottom:7px">Email *</label><input required type="email" placeholder="you@example.com" style="width:100%;padding:13px 15px;border:2px solid #1c0d2b;font-size:.98rem;font-family:inherit"></div>
+          </div>
+          <div style="margin-bottom:16px"><label style="display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;margin-bottom:7px">I'm interested in</label><select style="width:100%;padding:13px 15px;border:2px solid #1c0d2b;font-size:.98rem;font-family:inherit"><option>Becoming a member</option><option>Volunteering at a screening day</option><option>Partnering with SCOPH</option><option>Something else</option></select></div>
+          <div style="margin-bottom:22px"><label style="display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;margin-bottom:7px">Message</label><textarea placeholder="Tell us a bit more…" style="width:100%;padding:13px 15px;border:2px solid #1c0d2b;font-size:.98rem;font-family:inherit;min-height:90px;resize:vertical"></textarea></div>
+          <button type="submit" style="width:100%;padding:16px;background:#7c1fd0;color:#fff;border:none;cursor:pointer;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:.92rem">Send message →</button>
+        </form>
+        <div slot="else" style="text-align:center;padding:38px 10px">
+          <div class="poster" style="font-size:3rem;color:#7c1fd0">✓</div>
+          <h3 class="poster" style="font-size:1.7rem;margin:8px 0 8px">Message sent!</h3>
+          <p style="color:#4a3559;margin:0">A SCOPH member will get back to you soon.</p>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#12081d;color:rgba(255,255,255,.6)">
+  <div style="max-width:1240px;margin:0 auto;padding:44px 30px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;color:#fff;font-weight:800"><span class="poster" style="width:34px;height:34px;background:#7c1fd0;display:grid;place-items:center;flex:none">M</span>MKM · SCOPH</a>
+    <nav style="display:flex;gap:16px;flex-wrap:wrap;font-size:.86rem"><a href="Scorp.dc.html">SCORP</a><a href="Scora.dc.html">SCORA</a><a href="Scome.dc.html">SCOME</a><a href="Score.dc.html">SCORE</a><a href="Scope.dc.html">SCOPE</a><a href="Home.dc.html" style="color:#ffd23f">All committees →</a></nav>
+    <span style="width:100%;border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-size:.78rem;color:rgba(255,255,255,.4)">© 2026 MKM Medics Club — SCOPH</span>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false };
+  renderVals() {
+    return {
+      submitted: this.state.submitted,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

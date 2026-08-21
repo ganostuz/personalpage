@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCOPE — Professional Exchange · MKM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes fly{0%{transform:translateX(-10px) translateY(6px)}100%{transform:translateX(10px) translateY(-6px)}}
+@keyframes dash{to{stroke-dashoffset:-400}}
+@keyframes stampin{0%{opacity:0;transform:rotate(-18deg) scale(1.6)}100%{opacity:1;transform:rotate(-14deg) scale(1)}}
+body{margin:0;background:#f0f7f3;font-family:'Inter',sans-serif;color:#0a2b22;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+*{box-sizing:border-box}
+::selection{background:#0f9b74;color:#fff}
+.disp{font-family:'Unbounded',sans-serif}
+.scope-ph{background:#d3e8de;background-image:repeating-linear-gradient(-45deg,rgba(15,155,116,.12) 0 1px,transparent 1px 11px);position:relative}
+.perf{-webkit-mask-image:radial-gradient(circle 9px at 0 50%,transparent 98%,#000 100%),radial-gradient(circle 9px at 100% 50%,transparent 98%,#000 100%);mask-composite:intersect;-webkit-mask-composite:source-in}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media(max-width:880px){.scope-2col{grid-template-columns:1fr!important}.scope-g3{grid-template-columns:1fr!important}.scope-g4{grid-template-columns:1fr 1fr!important}.scope-pass{grid-template-columns:1fr!important}.scope-hero{grid-template-columns:1fr!important}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:60;background:rgba(240,247,243,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(10,43,34,.1)">
+  <div style="max-width:1240px;margin:0 auto;padding:13px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;font-weight:700;font-size:1rem">
+      <span class="disp" style="width:34px;height:34px;border-radius:10px;background:#0f9b74;color:#fff;display:grid;place-items:center;flex:none;font-size:.95rem">M</span>MKM <span style="color:#0f9b74">/ SCOPE</span>
+    </a>
+    <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:.9rem;font-weight:600">
+      <a href="#mission" style="color:#3e5c52">Mission</a>
+      <a href="#gallery" style="color:#3e5c52">Gallery</a>
+      <a href="#news" style="color:#3e5c52">News</a>
+      <a href="#members" style="color:#3e5c52">Team</a>
+      <a href="#contact" style="color:#0f9b74;font-weight:700">Board now →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="scope-hero" style="position:relative;overflow:hidden;max-width:1240px;margin:0 auto;padding:74px 30px 60px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center" data-screen-label="Hero">
+  <div style="animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both">
+    <span style="display:inline-flex;align-items:center;gap:8px;background:#0a2b22;color:#7ff0cc;font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:100px">✈ Standing Committee · Professional Exchange</span>
+    <h1 class="disp" style="font-weight:800;font-size:clamp(2.6rem,7vw,5.6rem);line-height:.98;letter-spacing:-.02em;margin:22px 0">See medicine, <span style="color:#0f9b74">everywhere.</span></h1>
+    <p style="font-size:1.2rem;line-height:1.55;max-width:48ch;color:#3e5c52;margin:0 0 30px">Clinical exchange placements abroad and hosting incoming students — because how medicine is practiced elsewhere changes how you'll practice it at home.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="#contact" style="padding:15px 30px;background:#0f9b74;color:#fff;font-weight:700;border-radius:12px;box-shadow:0 12px 28px rgba(15,155,116,.28)">Apply for an exchange →</a>
+      <a href="#gallery" style="padding:15px 30px;border:1.5px solid #0a2b22;font-weight:700;border-radius:12px">Where we go</a>
+    </div>
+  </div>
+  <!-- boarding pass -->
+  <div style="animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both .15s">
+    <div class="perf" style="display:grid;grid-template-columns:1fr auto;background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(10,43,34,.18);overflow:hidden">
+      <div style="padding:26px 28px">
+        <div style="display:flex;justify-content:space-between;font-size:.7rem;font-weight:700;letter-spacing:.1em;color:#0f9b74;text-transform:uppercase"><span>Boarding pass</span><span>MKM · SCOPE</span></div>
+        <div style="display:flex;align-items:center;gap:16px;margin:22px 0">
+          <div><div style="font-size:.66rem;color:#7c948b">FROM</div><div class="disp" style="font-weight:700;font-size:1.9rem">HOME</div></div>
+          <div style="flex:1;position:relative;height:2px;background:repeating-linear-gradient(90deg,#0f9b74 0 6px,transparent 6px 12px)"><span style="position:absolute;right:-6px;top:-9px;color:#0f9b74;animation:fly 2.4s ease-in-out infinite alternate">✈</span></div>
+          <div style="text-align:right"><div style="font-size:.66rem;color:#7c948b">TO</div><div class="disp" style="font-weight:700;font-size:1.9rem">WORLD</div></div>
+        </div>
+        <div style="display:flex;gap:24px;font-size:.78rem;color:#3e5c52"><span><b style="display:block;color:#0a2b22">Duration</b>4 weeks</span><span><b style="display:block;color:#0a2b22">Specialty</b>Your pick</span><span><b style="display:block;color:#0a2b22">Seat</b>Clinical</span></div>
+      </div>
+      <div style="background:#0f9b74;color:#fff;padding:22px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-width:74px">
+        <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700">Exchange</div>
+        <div style="font-family:monospace;font-size:.6rem;letter-spacing:1px;writing-mode:vertical-rl;transform:rotate(180deg)">‖‖▌‖▌▌‖▌‖‖▌‖</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION with skewed band -->
+<section id="mission" style="position:relative;background:#0a2b22;color:#e6f4ee;transform:skewY(-2.2deg);margin:30px 0" data-screen-label="Mission">
+  <div class="scope-2col" style="transform:skewY(2.2deg);max-width:1240px;margin:0 auto;padding:84px 30px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
+    <div>
+      <span style="font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7ff0cc">Our mission</span>
+      <h2 class="disp" style="font-weight:700;font-size:clamp(1.9rem,4vw,3rem);line-height:1.05;margin:14px 0 16px">Clinical practice looks different everywhere.</h2>
+      <p style="color:#a9cabd;line-height:1.6;margin:0">We help students experience medicine in another health system — and we welcome the world's students into ours.</p>
+    </div>
+    <div style="display:grid;gap:14px">
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(127,240,204,.2);border-radius:14px;padding:22px;display:flex;gap:16px;align-items:center"><span style="font-size:1.5rem">🛫</span><div><h4 style="margin:0 0 3px">Outgoing exchanges</h4><p style="margin:0;color:#a9cabd;font-size:.93rem">Clinical clerkships abroad through our partner network.</p></div></div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(127,240,204,.2);border-radius:14px;padding:22px;display:flex;gap:16px;align-items:center"><span style="font-size:1.5rem">🛬</span><div><h4 style="margin:0 0 3px">Hosting incoming students</h4><p style="margin:0;color:#a9cabd;font-size:.93rem">We welcome and support international students at our hospital.</p></div></div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(127,240,204,.2);border-radius:14px;padding:22px;display:flex;gap:16px;align-items:center"><span style="font-size:1.5rem">🧭</span><div><h4 style="margin:0 0 3px">Cross-cultural prep</h4><p style="margin:0;color:#a9cabd;font-size:.93rem">Sessions on adjusting to a new health system and culture.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS as destination cards -->
+<section style="max-width:1240px;margin:0 auto;padding:60px 30px 70px" data-screen-label="Focus areas">
+  <h2 class="disp" style="font-weight:700;font-size:clamp(1.9rem,4vw,2.8rem);margin:0 0 26px">Three ways we take action</h2>
+  <div class="scope-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <article style="background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(10,43,34,.08);transition:transform .3s" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'"><div class="scope-ph" style="height:120px;display:grid;place-items:center;font-size:2.4rem">🏥</div><div style="padding:24px"><h3 style="margin:0 0 8px;font-size:1.2rem">4-week clerkships</h3><p style="margin:0;color:#3e5c52;font-size:.94rem">Placements across specialties in partner teaching hospitals abroad.</p></div></article>
+    <article style="background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(10,43,34,.08);transition:transform .3s" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'"><div class="scope-ph" style="height:120px;display:grid;place-items:center;font-size:2.4rem">🤝</div><div style="padding:24px"><h3 style="margin:0 0 8px;font-size:1.2rem">Incoming host program</h3><p style="margin:0;color:#3e5c52;font-size:.94rem">A buddy system pairing visiting students with local hosts.</p></div></article>
+    <article style="background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(10,43,34,.08);transition:transform .3s" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'"><div class="scope-ph" style="height:120px;display:grid;place-items:center;font-size:2.4rem">🧳</div><div style="padding:24px"><h3 style="margin:0 0 8px;font-size:1.2rem">Orientation sessions</h3><p style="margin:0;color:#3e5c52;font-size:.94rem">Pre-departure and arrival briefings on health-system differences.</p></div></article>
+  </div>
+</section>
+
+<!-- GALLERY with stamps -->
+<section id="gallery" style="background:#e2f0e9" data-screen-label="Gallery">
+  <div style="max-width:1240px;margin:0 auto;padding:76px 30px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;margin-bottom:24px">
+      <h2 class="disp" style="font-weight:700;font-size:clamp(2rem,4.5vw,3rem);margin:0">Postcards</h2>
+      <span style="color:#0f9b74;font-weight:600;font-size:.9rem">Add your own travel photos later</span>
+    </div>
+    <div class="scope-g4" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:14px">
+      <figure class="scope-ph" style="margin:0;border-radius:14px;grid-column:span 2;grid-row:span 2;background-color:#cfe6db;position:relative"><span style="position:absolute;top:14px;right:14px;border:2px solid #0f9b74;color:#0f9b74;border-radius:50%;width:70px;height:70px;display:grid;place-items:center;font-size:.6rem;font-weight:700;text-align:center;transform:rotate(-14deg);animation:stampin .7s ease both">VISA<br>2026</span></figure>
+      <figure class="scope-ph" style="margin:0;border-radius:14px"></figure>
+      <figure class="scope-ph" style="margin:0;border-radius:14px"></figure>
+      <figure class="scope-ph" style="margin:0;border-radius:14px;grid-column:span 2;position:relative"><span style="position:absolute;bottom:14px;left:14px;border:2px solid #b8452e;color:#b8452e;padding:4px 10px;font-size:.66rem;font-weight:700;text-transform:uppercase;transform:rotate(-6deg)">Arrived</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" style="max-width:1240px;margin:0 auto;padding:76px 30px" data-screen-label="News">
+  <h2 class="disp" style="font-weight:700;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 26px">Departures board</h2>
+  <div style="background:#0a2b22;border-radius:16px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:120px 1fr auto;gap:18px;padding:16px 26px;color:#7ff0cc;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid rgba(127,240,204,.2)"><span>Date</span><span>Update</span><span>Status</span></div>
+    <div style="display:grid;grid-template-columns:120px 1fr auto;gap:18px;padding:20px 26px;color:#e6f4ee;border-bottom:1px solid rgba(127,240,204,.1);align-items:center"><span class="disp" style="color:#7ff0cc;font-size:.9rem">MAR 26</span><div><b>Summer clerkships open in 14 countries</b><div style="color:#a9cabd;font-size:.9rem">Applications for the next exchange cycle are live.</div></div><span style="background:#0f9b74;color:#fff;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700">OPEN</span></div>
+    <div style="display:grid;grid-template-columns:120px 1fr auto;gap:18px;padding:20px 26px;color:#e6f4ee;border-bottom:1px solid rgba(127,240,204,.1);align-items:center"><span class="disp" style="color:#7ff0cc;font-size:.9rem">FEB 26</span><div><b>We hosted 9 incoming students this winter</b><div style="color:#a9cabd;font-size:.9rem">From five countries, across four departments.</div></div><span style="background:rgba(127,240,204,.2);color:#7ff0cc;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700">DONE</span></div>
+    <div style="display:grid;grid-template-columns:120px 1fr auto;gap:18px;padding:20px 26px;color:#e6f4ee;align-items:center"><span class="disp" style="color:#7ff0cc;font-size:.9rem">JAN 26</span><div><b>New partner hospital signed</b><div style="color:#a9cabd;font-size:.9rem">Expanding placements into a new region.</div></div><span style="background:rgba(127,240,204,.2);color:#7ff0cc;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700">NEW</span></div>
+  </div>
+</section>
+
+<!-- TIMELINE itinerary -->
+<section style="max-width:1000px;margin:0 auto;padding:20px 30px 76px" data-screen-label="Timeline">
+  <h2 class="disp" style="font-weight:700;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 30px">Our itinerary</h2>
+  <div style="position:relative;border-left:2px dashed #0f9b74;padding-left:30px;display:grid;gap:24px">
+    <div style="position:relative"><span style="position:absolute;left:-40px;top:2px;font-size:1.1rem">📍</span><div class="disp" style="color:#0f9b74;font-weight:600">2021</div><h4 style="margin:4px 0 2px">First outgoing exchange</h4><p style="margin:0;color:#3e5c52;font-size:.94rem">Two students placed at a partner hospital abroad.</p></div>
+    <div style="position:relative"><span style="position:absolute;left:-40px;top:2px;font-size:1.1rem">📍</span><div class="disp" style="color:#0f9b74;font-weight:600">2023</div><h4 style="margin:4px 0 2px">Hosting program launches</h4><p style="margin:0;color:#3e5c52;font-size:.94rem">We begin welcoming incoming international students.</p></div>
+    <div style="position:relative"><span style="position:absolute;left:-40px;top:2px;font-size:1.1rem">📍</span><div class="disp" style="color:#0f9b74;font-weight:600">2024</div><h4 style="margin:4px 0 2px">10 partner hospitals</h4><p style="margin:0;color:#3e5c52;font-size:.94rem">Placements now cover a wide range of specialties.</p></div>
+    <div style="position:relative"><span style="position:absolute;left:-40px;top:2px;font-size:1.1rem">✈️</span><div class="disp" style="color:#0f9b74;font-weight:600">2026</div><h4 style="margin:4px 0 2px">14 countries</h4><p style="margin:0;color:#3e5c52;font-size:.94rem">Our largest exchange network yet.</p></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section style="background:#0f9b74;color:#fff" data-screen-label="Reviews">
+  <div style="max-width:1240px;margin:0 auto;padding:76px 30px">
+    <h2 class="disp" style="font-weight:700;font-size:clamp(1.9rem,4vw,2.8rem);margin:0 0 28px">Traveller reviews</h2>
+    <div class="scope-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <figure style="margin:0;background:rgba(255,255,255,.12);border-radius:16px;padding:28px"><div style="font-size:1.3rem;margin-bottom:8px">★★★★★</div><p style="font-size:1.02rem;line-height:1.5;margin:0 0 16px">"Four weeks in another country's hospital taught me more about flexibility than four years of lectures."</p><figcaption style="font-size:.85rem;opacity:.85">— Exchange alum</figcaption></figure>
+      <figure style="margin:0;background:rgba(255,255,255,.12);border-radius:16px;padding:28px"><div style="font-size:1.3rem;margin-bottom:8px">★★★★★</div><p style="font-size:1.02rem;line-height:1.5;margin:0 0 16px">"Being hosted here made a foreign city feel like home within a week."</p><figcaption style="font-size:.85rem;opacity:.85">— Incoming student</figcaption></figure>
+      <figure style="margin:0;background:rgba(255,255,255,.12);border-radius:16px;padding:28px"><div style="font-size:1.3rem;margin-bottom:8px">★★★★★</div><p style="font-size:1.02rem;line-height:1.5;margin:0 0 16px">"The orientation prep meant I hit the ground running on day one."</p><figcaption style="font-size:.85rem;opacity:.85">— Exchange alum</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members" style="max-width:1240px;margin:0 auto;padding:76px 30px" data-screen-label="Members">
+  <h2 class="disp" style="font-weight:700;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 26px">The crew</h2>
+  <div class="scope-g4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+    <article style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(10,43,34,.08)"><div class="scope-ph" style="aspect-ratio:1"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Matej Polák</h4><p style="margin:4px 0 0;font-size:.85rem;color:#0f9b74;font-weight:600">Chair · 5th yr</p></div></article>
+    <article style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(10,43,34,.08)"><div class="scope-ph" style="aspect-ratio:1"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Veronika Suchá</h4><p style="margin:4px 0 0;font-size:.85rem;color:#0f9b74;font-weight:600">Outgoing · 4th yr</p></div></article>
+    <article style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(10,43,34,.08)"><div class="scope-ph" style="aspect-ratio:1"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Adrián Molnár</h4><p style="margin:4px 0 0;font-size:.85rem;color:#0f9b74;font-weight:600">Hosting · 3rd yr</p></div></article>
+    <article style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(10,43,34,.08)"><div class="scope-ph" style="aspect-ratio:1"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Petra Gažová</h4><p style="margin:4px 0 0;font-size:.85rem;color:#0f9b74;font-weight:600">Orientation · 4th yr</p></div></article>
+  </div>
+</section>
+
+<!-- WHERE WE ARE -->
+<section style="background:#e2f0e9" data-screen-label="Where we are">
+  <div class="scope-2col" style="max-width:1240px;margin:0 auto;padding:76px 30px;display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center">
+    <div>
+      <span style="font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#0f9b74">Where we go</span>
+      <h2 class="disp" style="font-weight:700;font-size:clamp(1.9rem,4vw,2.8rem);margin:12px 0 14px">Routes across the map</h2>
+      <p style="color:#3e5c52;line-height:1.6;margin:0 0 22px">Every dashed line is an active exchange route between us and a partner hospital abroad.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-weight:600">
+        <div style="display:flex;justify-content:space-between;background:#fff;border-radius:12px;padding:12px 16px"><span>Europe</span><b style="color:#0f9b74">09</b></div>
+        <div style="display:flex;justify-content:space-between;background:#fff;border-radius:12px;padding:12px 16px"><span>Americas</span><b style="color:#0f9b74">03</b></div>
+        <div style="display:flex;justify-content:space-between;background:#fff;border-radius:12px;padding:12px 16px"><span>Asia</span><b style="color:#0f9b74">02</b></div>
+        <div style="display:flex;justify-content:space-between;background:#fff;border-radius:12px;padding:12px 16px"><span>Total</span><b style="color:#0f9b74">14</b></div>
+      </div>
+    </div>
+    <div style="position:relative;aspect-ratio:16/10;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 34px rgba(10,43,34,.1)">
+      <svg viewBox="0 0 420 260" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M200,140 C150,80 90,90 70,60" fill="none" stroke="#0f9b74" stroke-width="2" stroke-dasharray="5 5" style="animation:dash 12s linear infinite"/>
+        <path d="M200,140 C280,120 330,150 360,90" fill="none" stroke="#0f9b74" stroke-width="2" stroke-dasharray="5 5" style="animation:dash 14s linear infinite"/>
+        <path d="M200,140 C160,190 120,200 90,210" fill="none" stroke="#0f9b74" stroke-width="2" stroke-dasharray="5 5" style="animation:dash 10s linear infinite"/>
+        <circle cx="200" cy="140" r="9" fill="#0f9b74"/>
+        <circle cx="70" cy="60" r="6" fill="#0a2b22"/><circle cx="360" cy="90" r="6" fill="#0a2b22"/><circle cx="90" cy="210" r="6" fill="#0a2b22"/>
+      </svg>
+      <span style="position:absolute;left:47%;top:52%;font-size:.7rem;font-weight:700;color:#0a2b22">HOME</span>
+      <span style="position:absolute;right:10px;bottom:8px;font-size:.66rem;color:#7c948b">illustrative</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Contact">
+  <div class="scope-2col" style="display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start">
+    <div>
+      <span style="font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#0f9b74">Board now</span>
+      <h2 class="disp" style="font-weight:700;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.02;margin:14px 0 16px">Apply, host, or partner with us.</h2>
+      <p style="color:#3e5c52;line-height:1.6;margin:0 0 24px">Tell us what you're interested in and a committee member will reply within a few days.</p>
+      <div style="font-weight:600;color:#0f9b74;line-height:2">scope@mkm.example<br>@mkm.scope</div>
+    </div>
+    <div style="background:#0a2b22;border-radius:20px;padding:38px;color:#e6f4ee">
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <form onSubmit="{{ onSubmit }}">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div style="margin-bottom:16px"><label style="display:block;font-size:.76rem;font-weight:600;color:#7ff0cc;margin-bottom:7px">Name *</label><input required placeholder="Your name" style="width:100%;padding:13px 15px;border:1px solid rgba(127,240,204,.3);border-radius:10px;font-size:.98rem;font-family:inherit;background:rgba(255,255,255,.06);color:#e6f4ee"></div>
+            <div style="margin-bottom:16px"><label style="display:block;font-size:.76rem;font-weight:600;color:#7ff0cc;margin-bottom:7px">Email *</label><input required type="email" placeholder="you@example.com" style="width:100%;padding:13px 15px;border:1px solid rgba(127,240,204,.3);border-radius:10px;font-size:.98rem;font-family:inherit;background:rgba(255,255,255,.06);color:#e6f4ee"></div>
+          </div>
+          <div style="margin-bottom:16px"><label style="display:block;font-size:.76rem;font-weight:600;color:#7ff0cc;margin-bottom:7px">I'm interested in</label><select style="width:100%;padding:13px 15px;border:1px solid rgba(127,240,204,.3);border-radius:10px;font-size:.98rem;font-family:inherit;background:rgba(255,255,255,.06);color:#e6f4ee"><option style="color:#0a2b22">Becoming a member</option><option style="color:#0a2b22">Applying for an exchange</option><option style="color:#0a2b22">Partnering with SCOPE</option><option style="color:#0a2b22">Something else</option></select></div>
+          <div style="margin-bottom:22px"><label style="display:block;font-size:.76rem;font-weight:600;color:#7ff0cc;margin-bottom:7px">Message</label><textarea placeholder="Tell us a bit more…" style="width:100%;padding:13px 15px;border:1px solid rgba(127,240,204,.3);border-radius:10px;font-size:.98rem;font-family:inherit;background:rgba(255,255,255,.06);color:#e6f4ee;min-height:90px;resize:vertical"></textarea></div>
+          <button type="submit" style="width:100%;padding:15px;background:#0f9b74;color:#fff;border:none;border-radius:12px;cursor:pointer;font-weight:700;font-size:1rem">Send message →</button>
+        </form>
+        <div slot="else" style="text-align:center;padding:38px 10px">
+          <div style="font-size:2.6rem">🛬</div>
+          <h3 class="disp" style="font-weight:700;font-size:1.5rem;margin:10px 0 8px">Message sent!</h3>
+          <p style="color:#a9cabd;margin:0">A SCOPE member will get back to you soon.</p>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0a2b22;color:rgba(230,244,238,.6)">
+  <div style="max-width:1240px;margin:0 auto;padding:44px 30px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;color:#e6f4ee;font-weight:700"><span class="disp" style="width:34px;height:34px;border-radius:10px;background:#0f9b74;color:#fff;display:grid;place-items:center;flex:none">M</span>MKM · SCOPE</a>
+    <nav style="display:flex;gap:16px;flex-wrap:wrap;font-size:.86rem"><a href="Scorp.dc.html">SCORP</a><a href="Scora.dc.html">SCORA</a><a href="Scome.dc.html">SCOME</a><a href="Score.dc.html">SCORE</a><a href="Scoph.dc.html">SCOPH</a><a href="Home.dc.html" style="color:#7ff0cc">All committees →</a></nav>
+    <span style="width:100%;border-top:1px solid rgba(230,244,238,.12);padding-top:18px;font-size:.78rem;color:rgba(230,244,238,.4)">© 2026 MKM Medics Club — SCOPE</span>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false };
+  renderVals() {
+    return {
+      submitted: this.state.submitted,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

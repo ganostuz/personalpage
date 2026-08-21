@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCORE — Research Exchange · MKM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes count{from{opacity:0}to{opacity:1}}
+@keyframes drift{from{background-position:0 0}to{background-position:600px 600px}}
+body{margin:0;background:#0d0b06;font-family:'Inter',sans-serif;color:#f3ead6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+*{box-sizing:border-box}
+::selection{background:#e8a52c;color:#0d0b06}
+.mono{font-family:'IBM Plex Mono',monospace}
+.serif{font-family:'Instrument Serif',serif}
+.score-ph{background:#1a1610;background-image:radial-gradient(circle at 50% 50%,rgba(232,165,44,.18) 0 1px,transparent 1px);background-size:14px 14px;border:1px solid rgba(232,165,44,.25);position:relative}
+.dots{background-image:radial-gradient(rgba(232,165,44,.12) 1px,transparent 1px);background-size:26px 26px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media(max-width:860px){.score-2col{grid-template-columns:1fr!important}.score-g3{grid-template-columns:1fr!important}.score-g4{grid-template-columns:1fr 1fr!important}.score-stats{grid-template-columns:1fr 1fr!important}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:60;background:rgba(13,11,6,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,165,44,.2)">
+  <div style="max-width:1240px;margin:0 auto;padding:13px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;font-weight:600;font-size:1rem">
+      <span style="width:32px;height:32px;border-radius:8px;background:#e8a52c;color:#0d0b06;display:grid;place-items:center;flex:none;font-family:'Instrument Serif',serif;font-size:1.2rem">M</span>MKM <span class="mono" style="color:#e8a52c;font-size:.86rem">/SCORE</span>
+    </a>
+    <nav class="mono" style="display:flex;gap:22px;flex-wrap:wrap;font-size:.78rem;letter-spacing:.04em">
+      <a href="#mission" style="color:rgba(243,234,214,.6)">mission</a>
+      <a href="#gallery" style="color:rgba(243,234,214,.6)">gallery</a>
+      <a href="#news" style="color:rgba(243,234,214,.6)">news</a>
+      <a href="#members" style="color:rgba(243,234,214,.6)">team</a>
+      <a href="#contact" style="color:#e8a52c">join →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="dots" style="position:relative;overflow:hidden;text-align:center;padding:100px 30px 90px;animation:drift 60s linear infinite" data-screen-label="Hero">
+  <div aria-hidden="true" style="position:absolute;left:50%;top:20%;transform:translateX(-50%);width:640px;height:640px;max-width:120vw;border-radius:50%;background:radial-gradient(circle,rgba(232,165,44,.28),transparent 62%);filter:blur(20px);animation:glow 6s ease-in-out infinite"></div>
+  <div style="position:relative;max-width:900px;margin:0 auto;animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both">
+    <span class="mono" style="display:inline-block;border:1px solid rgba(232,165,44,.4);color:#e8a52c;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 15px;border-radius:100px">Standing Committee on Research Exchange</span>
+    <h1 class="serif" style="font-weight:400;font-size:clamp(3rem,9vw,7.2rem);line-height:.94;margin:26px 0 22px">Turn curiosity into <span style="font-style:italic;color:#e8a52c">discovery.</span></h1>
+    <p style="font-size:1.22rem;line-height:1.55;max-width:50ch;margin:0 auto 32px;color:#c9bda3">Research placements abroad, a journal club, and coaching that helps students publish their first paper.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="#contact" style="padding:15px 30px;background:#e8a52c;color:#0d0b06;font-weight:600;border-radius:8px;box-shadow:0 0 40px rgba(232,165,44,.4)">Apply for an exchange →</a>
+      <a href="#gallery" style="padding:15px 30px;border:1px solid rgba(232,165,44,.4);color:#f3ead6;font-weight:600;border-radius:8px">Explore our work</a>
+    </div>
+  </div>
+  <div class="score-stats" style="position:relative;max-width:900px;margin:64px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,165,44,.2);border:1px solid rgba(232,165,44,.2)">
+    <div style="background:#0d0b06;padding:26px 12px"><div class="serif" style="font-size:2.6rem;color:#e8a52c;line-height:1">40+</div><div class="mono" style="font-size:.7rem;color:#c9bda3;margin-top:6px;letter-spacing:.05em">EXCHANGES / YR</div></div>
+    <div style="background:#0d0b06;padding:26px 12px"><div class="serif" style="font-size:2.6rem;color:#e8a52c;line-height:1">18</div><div class="mono" style="font-size:.7rem;color:#c9bda3;margin-top:6px;letter-spacing:.05em">PARTNER LABS</div></div>
+    <div style="background:#0d0b06;padding:26px 12px"><div class="serif" style="font-size:2.6rem;color:#e8a52c;line-height:1">12</div><div class="mono" style="font-size:.7rem;color:#c9bda3;margin-top:6px;letter-spacing:.05em">PUBLICATIONS</div></div>
+    <div style="background:#0d0b06;padding:26px 12px"><div class="serif" style="font-size:2.6rem;color:#e8a52c;line-height:1">24</div><div class="mono" style="font-size:.7rem;color:#c9bda3;margin-top:6px;letter-spacing:.05em">JOURNAL CLUBS</div></div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" style="border-top:1px solid rgba(232,165,44,.2)" data-screen-label="Mission">
+  <div class="score-2col" style="max-width:1240px;margin:0 auto;padding:80px 30px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+    <div>
+      <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:16px">// OUR MISSION</div>
+      <h2 class="serif" style="font-weight:400;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.05;margin:0 0 16px">Curiosity is a skill — we help students practice it early.</h2>
+      <p style="color:#c9bda3;line-height:1.6;margin:0">From a first literature search to a poster at a conference, we give students the support and connections to do real research.</p>
+    </div>
+    <div style="display:grid;gap:14px">
+      <div style="border:1px solid rgba(232,165,44,.25);border-radius:12px;padding:24px;display:flex;gap:18px;transition:border-color .3s,box-shadow .3s" onmouseover="this.style.borderColor='rgba(232,165,44,.7)';this.style.boxShadow='0 0 30px rgba(232,165,44,.15)'" onmouseout="this.style.borderColor='rgba(232,165,44,.25)';this.style.boxShadow='none'"><span class="serif" style="font-size:2rem;color:#e8a52c;line-height:1">→</span><div><h4 style="margin:0 0 4px">Research placements abroad</h4><p style="margin:0;color:#c9bda3;font-size:.94rem">Summer exchanges with partner universities worldwide.</p></div></div>
+      <div style="border:1px solid rgba(232,165,44,.25);border-radius:12px;padding:24px;display:flex;gap:18px;transition:border-color .3s,box-shadow .3s" onmouseover="this.style.borderColor='rgba(232,165,44,.7)';this.style.boxShadow='0 0 30px rgba(232,165,44,.15)'" onmouseout="this.style.borderColor='rgba(232,165,44,.25)';this.style.boxShadow='none'"><span class="serif" style="font-size:2rem;color:#e8a52c;line-height:1">→</span><div><h4 style="margin:0 0 4px">Journal club</h4><p style="margin:0;color:#c9bda3;font-size:.94rem">Biweekly critical reading of the latest medical literature.</p></div></div>
+      <div style="border:1px solid rgba(232,165,44,.25);border-radius:12px;padding:24px;display:flex;gap:18px;transition:border-color .3s,box-shadow .3s" onmouseover="this.style.borderColor='rgba(232,165,44,.7)';this.style.boxShadow='0 0 30px rgba(232,165,44,.15)'" onmouseout="this.style.borderColor='rgba(232,165,44,.25)';this.style.boxShadow='none'"><span class="serif" style="font-size:2rem;color:#e8a52c;line-height:1">→</span><div><h4 style="margin:0 0 4px">Science communication</h4><p style="margin:0;color:#c9bda3;font-size:.94rem">Coaching on abstracts, posters and conference talks.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS -->
+<section style="background:#12100a" data-screen-label="Focus areas">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 30px">
+    <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:8px">/ PROGRAMMES</div>
+    <h2 class="serif" style="font-weight:400;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 28px">Three ways we take action</h2>
+    <div class="score-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <article style="border:1px solid rgba(232,165,44,.25);border-radius:14px;padding:30px;background:radial-gradient(120% 100% at 100% 0%,rgba(232,165,44,.08),transparent 60%)"><div class="mono" style="color:#e8a52c;font-size:.72rem">01</div><h3 class="serif" style="font-weight:400;font-size:1.6rem;margin:12px 0 10px">Exchange placements</h3><p style="margin:0;color:#c9bda3;font-size:.95rem;line-height:1.55">4–8 week research stints hosted by partner labs abroad.</p></article>
+      <article style="border:1px solid rgba(232,165,44,.25);border-radius:14px;padding:30px;background:radial-gradient(120% 100% at 100% 0%,rgba(232,165,44,.08),transparent 60%)"><div class="mono" style="color:#e8a52c;font-size:.72rem">02</div><h3 class="serif" style="font-weight:400;font-size:1.6rem;margin:12px 0 10px">Journal club</h3><p style="margin:0;color:#c9bda3;font-size:.95rem;line-height:1.55">Casual, rotating-host discussions of one paper at a time.</p></article>
+      <article style="border:1px solid rgba(232,165,44,.25);border-radius:14px;padding:30px;background:radial-gradient(120% 100% at 100% 0%,rgba(232,165,44,.08),transparent 60%)"><div class="mono" style="color:#e8a52c;font-size:.72rem">03</div><h3 class="serif" style="font-weight:400;font-size:1.6rem;margin:12px 0 10px">Sci-comm workshops</h3><p style="margin:0;color:#c9bda3;font-size:.95rem;line-height:1.55">Hands-on help turning a project into a poster or talk.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Gallery">
+  <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:8px">/ ARCHIVE</div>
+  <h2 class="serif" style="font-weight:400;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 24px">From the lab &amp; the field</h2>
+  <div class="score-g4" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px">
+    <figure class="score-ph" style="margin:0;border-radius:12px;grid-column:span 2;grid-row:span 2"><span class="mono" style="position:absolute;left:10px;bottom:10px;font-size:.62rem;color:#e8a52c">lab_placement.01</span></figure>
+    <figure class="score-ph" style="margin:0;border-radius:12px"><span class="mono" style="position:absolute;left:10px;bottom:10px;font-size:.62rem;color:#e8a52c">poster</span></figure>
+    <figure class="score-ph" style="margin:0;border-radius:12px"><span class="mono" style="position:absolute;left:10px;bottom:10px;font-size:.62rem;color:#e8a52c">journal club</span></figure>
+    <figure class="score-ph" style="margin:0;border-radius:12px;grid-column:span 2"><span class="mono" style="position:absolute;left:10px;bottom:10px;font-size:.62rem;color:#e8a52c">conference</span></figure>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" style="border-top:1px solid rgba(232,165,44,.2);border-bottom:1px solid rgba(232,165,44,.2)" data-screen-label="News">
+  <div style="max-width:1240px;margin:0 auto;padding:76px 30px">
+    <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:8px">/ NEWS</div>
+    <h2 class="serif" style="font-weight:400;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 26px">Latest updates</h2>
+    <div class="score-g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <article style="border:1px solid rgba(232,165,44,.2);border-radius:14px;overflow:hidden"><div class="score-ph" style="aspect-ratio:16/10;border:none;border-bottom:1px solid rgba(232,165,44,.2)"></div><div style="padding:22px"><div class="mono" style="color:#e8a52c;font-size:.68rem">EXCHANGE · MAR 2026</div><h3 class="serif" style="font-weight:400;font-size:1.4rem;margin:8px 0 8px">Summer placements open in 18 labs</h3><p style="margin:0;color:#c9bda3;font-size:.93rem">Applications for this year's research exchange are live.</p></div></article>
+      <article style="border:1px solid rgba(232,165,44,.2);border-radius:14px;overflow:hidden"><div class="score-ph" style="aspect-ratio:16/10;border:none;border-bottom:1px solid rgba(232,165,44,.2)"></div><div style="padding:22px"><div class="mono" style="color:#e8a52c;font-size:.68rem">PUBLICATION · FEB 2026</div><h3 class="serif" style="font-weight:400;font-size:1.4rem;margin:8px 0 8px">Two members co-author journal paper</h3><p style="margin:0;color:#c9bda3;font-size:.93rem">Work from last summer's exchange now in print.</p></div></article>
+      <article style="border:1px solid rgba(232,165,44,.2);border-radius:14px;overflow:hidden"><div class="score-ph" style="aspect-ratio:16/10;border:none;border-bottom:1px solid rgba(232,165,44,.2)"></div><div style="padding:22px"><div class="mono" style="color:#e8a52c;font-size:.68rem">EVENT · JAN 2026</div><h3 class="serif" style="font-weight:400;font-size:1.4rem;margin:8px 0 8px">Journal club hits its 100th paper</h3><p style="margin:0;color:#c9bda3;font-size:.93rem">Three years of biweekly critical reading.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE as plot -->
+<section style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Timeline">
+  <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:8px">/ GROWTH_PLOT</div>
+  <h2 class="serif" style="font-weight:400;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 30px">Our trajectory</h2>
+  <div style="position:relative;border-left:2px solid rgba(232,165,44,.3);padding-left:30px;display:grid;gap:26px">
+    <div style="position:relative"><span style="position:absolute;left:-37px;top:4px;width:12px;height:12px;border-radius:50%;background:#e8a52c;box-shadow:0 0 14px #e8a52c"></span><div class="mono" style="color:#e8a52c;font-size:.85rem">2021</div><h4 style="margin:4px 0 2px">First exchange agreement</h4><p style="margin:0;color:#c9bda3;font-size:.94rem">A single partner lab hosts two students.</p></div>
+    <div style="position:relative"><span style="position:absolute;left:-37px;top:4px;width:12px;height:12px;border-radius:50%;background:#e8a52c;box-shadow:0 0 14px #e8a52c"></span><div class="mono" style="color:#e8a52c;font-size:.85rem">2023</div><h4 style="margin:4px 0 2px">Journal club founded</h4><p style="margin:0;color:#c9bda3;font-size:.94rem">Biweekly sessions become a fixture.</p></div>
+    <div style="position:relative"><span style="position:absolute;left:-37px;top:4px;width:12px;height:12px;border-radius:50%;background:#e8a52c;box-shadow:0 0 14px #e8a52c"></span><div class="mono" style="color:#e8a52c;font-size:.85rem">2024</div><h4 style="margin:4px 0 2px">First member publications</h4><p style="margin:0;color:#c9bda3;font-size:.94rem">Exchange work reaches peer-reviewed journals.</p></div>
+    <div style="position:relative"><span style="position:absolute;left:-37px;top:4px;width:12px;height:12px;border-radius:50%;background:#e8a52c;box-shadow:0 0 20px #e8a52c;animation:glow 1.6s infinite"></span><div class="mono" style="color:#e8a52c;font-size:.85rem">2026</div><h4 style="margin:4px 0 2px">18 partner labs</h4><p style="margin:0;color:#c9bda3;font-size:.94rem">Placements now span four continents.</p></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section style="background:#12100a" data-screen-label="Reviews">
+  <div style="max-width:1000px;margin:0 auto;padding:80px 30px;text-align:center">
+    <div class="serif" style="font-size:4rem;color:#e8a52c;line-height:.4;height:34px">"</div>
+    <blockquote class="serif" style="font-weight:400;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.32;margin:30px 0 20px">My exchange placement was the first time research felt like something I could actually do, not just read about.</blockquote>
+    <div class="mono" style="font-size:.8rem;color:#e8a52c;letter-spacing:.08em">— EXCHANGE ALUM · NOW IN A PhD PROGRAMME</div>
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members" style="max-width:1240px;margin:0 auto;padding:80px 30px" data-screen-label="Members">
+  <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:8px">/ TEAM</div>
+  <h2 class="serif" style="font-weight:400;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 26px">The board</h2>
+  <div class="score-g4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+    <article style="border:1px solid rgba(232,165,44,.2);border-radius:12px;overflow:hidden"><div class="score-ph" style="aspect-ratio:1;border:none"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Radka Vávrová</h4><p class="mono" style="margin:4px 0 0;font-size:.72rem;color:#e8a52c">CHAIR · 5TH YR</p></div></article>
+    <article style="border:1px solid rgba(232,165,44,.2);border-radius:12px;overflow:hidden"><div class="score-ph" style="aspect-ratio:1;border:none"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Filip Danko</h4><p class="mono" style="margin:4px 0 0;font-size:.72rem;color:#e8a52c">EXCHANGES · 4TH YR</p></div></article>
+    <article style="border:1px solid rgba(232,165,44,.2);border-radius:12px;overflow:hidden"><div class="score-ph" style="aspect-ratio:1;border:none"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Simona Rybárová</h4><p class="mono" style="margin:4px 0 0;font-size:.72rem;color:#e8a52c">JOURNAL CLUB · 3RD YR</p></div></article>
+    <article style="border:1px solid rgba(232,165,44,.2);border-radius:12px;overflow:hidden"><div class="score-ph" style="aspect-ratio:1;border:none"></div><div style="padding:16px"><h4 style="margin:0;font-size:1.05rem">Oliver Kráľ</h4><p class="mono" style="margin:4px 0 0;font-size:.72rem;color:#e8a52c">SCI-COMM · 4TH YR</p></div></article>
+  </div>
+</section>
+
+<!-- WHERE WE ARE -->
+<section style="border-top:1px solid rgba(232,165,44,.2)" data-screen-label="Where we are">
+  <div class="score-2col" style="max-width:1240px;margin:0 auto;padding:76px 30px;display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center">
+    <div>
+      <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:14px">/ NETWORK</div>
+      <h2 class="serif" style="font-weight:400;font-size:clamp(2rem,4.5vw,3rem);margin:0 0 14px">A network that spans the globe</h2>
+      <p style="color:#c9bda3;line-height:1.6;margin:0 0 22px">Our exchange partners are research labs across four continents. Every node is a lab that has hosted our students.</p>
+      <div class="mono" style="font-size:.82rem;color:#e8a52c;display:grid;gap:8px">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px dashed rgba(232,165,44,.3);padding-bottom:6px"><span>EUROPE</span><span>11 labs</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px dashed rgba(232,165,44,.3);padding-bottom:6px"><span>AMERICAS</span><span>04 labs</span></div>
+        <div style="display:flex;justify-content:space-between"><span>ASIA-PACIFIC</span><span>03 labs</span></div>
+      </div>
+    </div>
+    <div class="score-ph" style="position:relative;aspect-ratio:16/10;border-radius:14px">
+      <span style="position:absolute;left:24%;top:38%;width:12px;height:12px;border-radius:50%;background:#e8a52c;box-shadow:0 0 16px #e8a52c"></span>
+      <span style="position:absolute;left:46%;top:30%;width:12px;height:12px;border-radius:50%;background:#e8a52c;box-shadow:0 0 16px #e8a52c;animation:glow 2s infinite"></span>
+      <span style="position:absolute;left:16%;top:56%;width:10px;height:10px;border-radius:50%;background:#e8a52c;box-shadow:0 0 12px #e8a52c"></span>
+      <span style="position:absolute;left:72%;top:60%;width:12px;height:12px;border-radius:50%;background:#e8a52c;box-shadow:0 0 16px #e8a52c"></span>
+      <span style="position:absolute;left:84%;top:40%;width:10px;height:10px;border-radius:50%;background:#e8a52c;box-shadow:0 0 12px #e8a52c"></span>
+      <span class="mono" style="position:absolute;right:10px;bottom:8px;font-size:.62rem;color:rgba(232,165,44,.6)">illustrative</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="dots" style="border-top:1px solid rgba(232,165,44,.2)" data-screen-label="Contact">
+  <div class="score-2col" style="max-width:1240px;margin:0 auto;padding:80px 30px;display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start">
+    <div>
+      <div class="mono" style="font-size:.74rem;color:#e8a52c;letter-spacing:.1em;margin-bottom:14px">/ JOIN</div>
+      <h2 class="serif" style="font-weight:400;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1;margin:0 0 16px">Apply, join journal club, or partner.</h2>
+      <p style="color:#c9bda3;line-height:1.6;margin:0 0 24px">Tell us what you're interested in and a committee member will reply within a few days.</p>
+      <div class="mono" style="font-size:.85rem;color:#e8a52c;line-height:2">score@mkm.example<br>@mkm.score</div>
+    </div>
+    <div style="background:#1a1610;border:1px solid rgba(232,165,44,.3);border-radius:16px;padding:38px">
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <form onSubmit="{{ onSubmit }}">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div style="margin-bottom:16px"><label class="mono" style="display:block;font-size:.7rem;color:#e8a52c;margin-bottom:7px">NAME *</label><input required placeholder="Your name" style="width:100%;padding:13px 15px;border:1px solid rgba(232,165,44,.3);border-radius:8px;font-size:.98rem;font-family:'Inter',sans-serif;background:#0d0b06;color:#f3ead6"></div>
+            <div style="margin-bottom:16px"><label class="mono" style="display:block;font-size:.7rem;color:#e8a52c;margin-bottom:7px">EMAIL *</label><input required type="email" placeholder="you@example.com" style="width:100%;padding:13px 15px;border:1px solid rgba(232,165,44,.3);border-radius:8px;font-size:.98rem;font-family:'Inter',sans-serif;background:#0d0b06;color:#f3ead6"></div>
+          </div>
+          <div style="margin-bottom:16px"><label class="mono" style="display:block;font-size:.7rem;color:#e8a52c;margin-bottom:7px">INTEREST</label><select style="width:100%;padding:13px 15px;border:1px solid rgba(232,165,44,.3);border-radius:8px;font-size:.98rem;font-family:'Inter',sans-serif;background:#0d0b06;color:#f3ead6"><option>Becoming a member</option><option>Applying for an exchange</option><option>Partnering with SCORE</option><option>Something else</option></select></div>
+          <div style="margin-bottom:22px"><label class="mono" style="display:block;font-size:.7rem;color:#e8a52c;margin-bottom:7px">MESSAGE</label><textarea placeholder="Tell us a bit more…" style="width:100%;padding:13px 15px;border:1px solid rgba(232,165,44,.3);border-radius:8px;font-size:.98rem;font-family:'Inter',sans-serif;background:#0d0b06;color:#f3ead6;min-height:90px;resize:vertical"></textarea></div>
+          <button type="submit" style="width:100%;padding:15px;background:#e8a52c;color:#0d0b06;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:1rem;box-shadow:0 0 30px rgba(232,165,44,.35)">Send message →</button>
+        </form>
+        <div slot="else" style="text-align:center;padding:40px 10px">
+          <div class="serif" style="font-size:3rem;color:#e8a52c">✦</div>
+          <h3 class="serif" style="font-weight:400;font-size:1.7rem;margin:8px 0 8px">Message sent</h3>
+          <p style="color:#c9bda3;margin:0">A SCORE member will get back to you soon.</p>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0a0804;color:rgba(243,234,214,.55);border-top:1px solid rgba(232,165,44,.15)">
+  <div style="max-width:1240px;margin:0 auto;padding:44px 30px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:10px;color:#f3ead6;font-weight:600"><span style="width:32px;height:32px;border-radius:8px;background:#e8a52c;color:#0d0b06;display:grid;place-items:center;flex:none;font-family:'Instrument Serif',serif">M</span>MKM · SCORE</a>
+    <nav class="mono" style="display:flex;gap:16px;flex-wrap:wrap;font-size:.8rem"><a href="Scorp.dc.html">SCORP</a><a href="Scora.dc.html">SCORA</a><a href="Scome.dc.html">SCOME</a><a href="Scope.dc.html">SCOPE</a><a href="Scoph.dc.html">SCOPH</a><a href="Home.dc.html" style="color:#e8a52c">ALL→</a></nav>
+    <span class="mono" style="width:100%;border-top:1px solid rgba(243,234,214,.1);padding-top:18px;font-size:.76rem;color:rgba(243,234,214,.35)">© 2026 MKM MEDICS CLUB — SCORE</span>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false };
+  renderVals() {
+    return {
+      submitted: this.state.submitted,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
